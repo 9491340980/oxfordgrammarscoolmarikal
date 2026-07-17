@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Oxford Grammar School — Studio</title>
+<style>
+  :root{--ink:#0a1f3c;--gold:#c79a3e;--cream:#faf7f0;--line:#e6e2d8;}
+  *{box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+  body{margin:0;background:var(--cream);color:var(--ink)}
+  header{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:14px;
+    background:#081a33;color:#fff;padding:12px 20px}
+  header img{height:34px;width:34px;border-radius:50%;background:#fff;object-fit:contain}
+  header b{font-size:15px}
+  header .sub{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#c79a3e}
+  header .actions{margin-left:auto;display:flex;gap:8px}
+  button{cursor:pointer;border:0;border-radius:9px;padding:9px 16px;font-weight:600;font-size:13px}
+  .save{background:var(--gold);color:#081a33}
+  .build{background:#1c3a63;color:#fff}
+  .ghost{background:transparent;border:1px solid #ffffff44;color:#fff}
+  .wrap{display:flex;min-height:calc(100vh - 58px)}
+  nav{width:210px;border-right:1px solid var(--line);background:#fff;padding:14px 10px;flex-shrink:0}
+  nav a{display:block;padding:9px 12px;border-radius:8px;color:#33425a;text-decoration:none;font-size:14px;font-weight:500}
+  nav a.active{background:var(--ink);color:#fff}
+  main{flex:1;padding:26px;max-width:880px}
+  h2{font-size:22px;margin:0 0 4px}
+  .hint{color:#6b7689;font-size:13px;margin:0 0 18px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+  .grid{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+  label{display:block;font-size:12px;font-weight:600;color:#55617a;margin-bottom:5px}
+  input,textarea,select{width:100%;padding:9px 11px;border:1px solid #d7d2c5;border-radius:9px;font-size:14px;background:#fff;color:var(--ink)}
+  textarea{min-height:78px;resize:vertical}
+  .full{grid-column:1/-1}
+  .row{display:flex;gap:12px;align-items:flex-start}
+  .thumb{width:60px;height:60px;border-radius:9px;object-fit:cover;border:1px solid var(--line);background:#eee;flex-shrink:0}
+  .del{background:#fdecec;color:#c0392b;padding:6px 11px;font-size:12px;border-radius:8px}
+  .add{background:#eef4ec;color:#1e7d46;border:1px dashed #1e7d4655}
+  .muted{color:#8a93a6;font-size:12px}
+  .uprow{display:flex;gap:8px;align-items:center;margin-top:6px}
+  .uprow input[type=file]{font-size:12px;border:0;padding:0}
+  #toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#081a33;color:#fff;
+    padding:11px 18px;border-radius:10px;font-size:13px;opacity:0;transition:.3s;pointer-events:none}
+  #toast.on{opacity:1}
+  pre{background:#0c1726;color:#cfe;padding:12px;border-radius:10px;font-size:11px;max-height:240px;overflow:auto;white-space:pre-wrap}
+  .pill{display:inline-block;background:#f0e3c2;color:#7a5e1d;border-radius:20px;padding:2px 9px;font-size:11px;font-weight:600;margin-left:6px}
+</style>
+</head>
+<body>
+<header>
+  <img src="/logo.png" alt="logo" onerror="this.style.display='none'"/>
+  <div><b>Oxford Grammar School</b><div class="sub">Content Studio</div></div>
+  <div class="actions">
+    <button class="ghost" onclick="reload()">Reload</button>
+    <button class="build" onclick="buildSite()">Rebuild site</button>
+    <button class="save" onclick="save()">Save changes</button>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav id="nav"></nav>
+  <main id="main"></main>
+</div>
+<div id="toast"></div>
+
+<script>
+const SECTIONS = [
+  ["content","Site Content"],
+  ["gallery","Gallery"],
+  ["news","News & Events"],
+  ["results","Board Results"],
+  ["faculty","Faculty"],
+  ["disclosureDocs","CBSE Documents"],
+];
+const NEWS_CATS = ["Announcement","Event","Achievement","Circular"];
+let data = null, active = "content";
+
+const $ = (h)=>{const t=document.createElement('template');t.innerHTML=h.trim();return t.content.firstChild;};
+const pretty = (k)=>k.split('.').map(s=>s.replace(/([A-Z])/g,' $1')).join(' › ').replace(/\b\w/g,c=>c.toUpperCase());
+const isLong = (k,v)=>/message|body|address|subtitle|body1|body2|note/i.test(k) || (v&&v.length>70);
+const uid = ()=> 'x'+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+
+async function load(){ data = await (await fetch('/api/content')).json(); render(); }
+function reload(){ load(); toast('Reloaded from file'); }
+
+function render(){
+  document.getElementById('nav').innerHTML='';
+  SECTIONS.forEach(([id,label])=>{
+    const a=$(`<a href="#" class="${active===id?'active':''}">${label}</a>`);
+    a.onclick=(e)=>{e.preventDefault();active=id;render();};
+    document.getElementById('nav').appendChild(a);
+  });
+  const m=document.getElementById('main'); m.innerHTML='';
+  if(active==='content') renderSettings(m);
+  else renderArray(m, active);
+}
+
+/* ---------- Settings ---------- */
+function renderSettings(m){
+  m.appendChild($(`<div><h2>Site Content</h2><p class="hint">Text & key images across the website. Click “Save changes”, then “Rebuild site” to publish.</p></div>`));
+  const groups={};
+  Object.keys(data.settings).forEach(k=>{ const g=k.split('.')[0]; (groups[g]=groups[g]||[]).push(k); });
+  Object.entries(groups).forEach(([g,keys])=>{
+    const card=$(`<div class="card"></div>`);
+    card.appendChild($(`<h3 style="margin:0 0 12px;text-transform:capitalize">${g}</h3>`));
+    const grid=$(`<div class="grid"></div>`);
+    keys.forEach(k=>{
+      const v=data.settings[k]??'';
+      const long=isLong(k,v);
+      const wrap=$(`<div class="${long?'full':''}"></div>`);
+      wrap.appendChild($(`<label>${pretty(k)}</label>`));
+      const f= long? $(`<textarea></textarea>`) : $(`<input>`);
+      f.value=v; f.oninput=()=>data.settings[k]=f.value;
+      wrap.appendChild(f);
+      grid.appendChild(wrap);
+    });
+    card.appendChild(grid); m.appendChild(card);
+  });
+}
+
+/* ---------- Arrays ---------- */
+const FIELDS={
+  gallery:[['title','Title'],['category','Category'],['url','Image','img']],
+  news:[['title','Title'],['slug','Slug (URL)'],['category','Category','select',NEWS_CATS],
+        ['date','Date','date'],['published','Published','check'],['excerpt','Excerpt','area'],
+        ['coverUrl','Cover image','img'],['body','Body','area']],
+  results:[['year','Year'],['classLevel','Class','select',['X','XII']],['appeared','Appeared','num'],
+           ['passed','Passed','num'],['topperName','Topper name'],['topperScore','Topper score']],
+  faculty:[['name','Name'],['designation','Designation'],['qualification','Qualification'],
+           ['subject','Subject'],['photoUrl','Photo','img'],['sort','Order','num']],
+  disclosureDocs:[['label','Document label'],['fileUrl','File (PDF/image)','file'],['note','Note'],['sort','Order','num']],
+};
+const TITLES={gallery:'Gallery',news:'News & Events',results:'Board Results',faculty:'Faculty',disclosureDocs:'CBSE Documents'};
+
+function blank(sec){
+  const o={}; FIELDS[sec].forEach(([k,,t])=>o[k]= t==='num'?0 : t==='check'?true : '');
+  if(sec==='gallery'||sec==='results') o.id=uid();
+  if(sec==='news'){o.id=uid();o.published=true;o.date=new Date().toISOString();o.category='Announcement';}
+  if('sort' in o) o.sort=(data[sec]||[]).length;
+  return o;
+}
+
+function renderArray(m, sec){
+  m.appendChild($(`<div><h2>${TITLES[sec]} <span class="pill">${data[sec].length}</span></h2>
+    <p class="hint">Add, edit or remove items. Remember to Save, then Rebuild site.</p></div>`));
+  data[sec].forEach((item,idx)=>{
+    const card=$(`<div class="card"></div>`);
+    const grid=$(`<div class="grid"></div>`);
+    FIELDS[sec].forEach(([k,label,type,opts])=>{
+      const full = type==='area'||type==='img'||type==='file';
+      const wrap=$(`<div class="${full?'full':''}"></div>`);
+      wrap.appendChild($(`<label>${label}</label>`));
+      if(type==='area'){ const f=$(`<textarea></textarea>`);f.value=item[k]??'';f.oninput=()=>item[k]=f.value;wrap.appendChild(f);}
+      else if(type==='check'){ const f=$(`<input type="checkbox">`);f.checked=!!item[k];f.onchange=()=>item[k]=f.checked;wrap.appendChild($(`<div></div>`)).appendChild(f);}
+      else if(type==='num'){ const f=$(`<input type="number">`);f.value=item[k]??0;f.oninput=()=>item[k]=Number(f.value);wrap.appendChild(f);}
+      else if(type==='date'){ const f=$(`<input type="date">`);f.value=(item[k]||'').slice(0,10);f.oninput=()=>item[k]=new Date(f.value).toISOString();wrap.appendChild(f);}
+      else if(type==='select'){ const f=$(`<select></select>`);opts.forEach(o=>{const op=$(`<option>${o}</option>`);if(item[k]===o)op.selected=true;f.appendChild(op);});f.onchange=()=>item[k]=f.value;wrap.appendChild(f);}
+      else if(type==='img'||type==='file'){
+        const row=$(`<div class="row"></div>`);
+        if(type==='img'){const t=$(`<img class="thumb">`);t.src=item[k]||'';row.appendChild(t);}
+        const right=$(`<div style="flex:1"></div>`);
+        const f=$(`<input>`);f.value=item[k]??'';f.placeholder='URL or upload below';f.oninput=()=>item[k]=f.value;
+        right.appendChild(f);
+        const up=$(`<div class="uprow"><input type="file" accept="${type==='file'?'application/pdf,image/*':'image/*'}"><span class="muted">→ uploads & fills the URL</span></div>`);
+        up.querySelector('input').onchange=async(e)=>{
+          const file=e.target.files[0]; if(!file)return;
+          const fd=new FormData();fd.append('file',file);
+          const r=await fetch('/api/upload',{method:'POST',body:fd}); const j=await r.json();
+          if(j.url){item[k]=j.url;render();toast('Uploaded');}
+        };
+        right.appendChild(up); row.appendChild(right); wrap.appendChild(row);
+      }
+      else { const f=$(`<input>`);f.value=item[k]??'';f.oninput=()=>item[k]=f.value;wrap.appendChild(f);}
+      grid.appendChild(wrap);
+    });
+    card.appendChild(grid);
+    const del=$(`<button class="del" style="margin-top:12px">Delete</button>`);
+    del.onclick=()=>{data[sec].splice(idx,1);render();};
+    card.appendChild(del);
+    m.appendChild(card);
+  });
+  const add=$(`<button class="add" style="padding:12px 18px">+ Add ${TITLES[sec].replace(/s$/,'')}</button>`);
+  add.onclick=()=>{data[sec].push(blank(sec));render();};
+  m.appendChild(add);
+}
+
+/* ---------- Save / Build ---------- */
+async function save(){
+  // auto-compute pass %
+  (data.results||[]).forEach(r=>{ r.passPercent = r.appeared? Math.round((r.passed/r.appeared)*1000)/10 : 0; });
+  await fetch('/api/content',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
+  toast('✓ Saved to content.json');
+}
+async function buildSite(){
+  toast('Building… (~30s)');
+  const r=await fetch('/api/build',{method:'POST'}); const j=await r.json();
+  const m=document.getElementById('main');
+  const box=$(`<div class="card"><h3>${j.ok?'✓ Build complete — out/ updated':'✗ Build failed'}</h3><pre>${(j.log||'').replace(/</g,'&lt;')}</pre></div>`);
+  m.prepend(box); window.scrollTo(0,0);
+  toast(j.ok?'✓ Site rebuilt — ready to deploy':'Build failed — see log');
+}
+let tT; function toast(t){const e=document.getElementById('toast');e.textContent=t;e.classList.add('on');clearTimeout(tT);tT=setTimeout(()=>e.classList.remove('on'),2200);}
+
+load();
+</script>
+</body>
+</html>

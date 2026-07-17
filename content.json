@@ -1,0 +1,285 @@
+{
+  "settings": {
+    "school.name": "Oxford Grammar School",
+    "school.estd": "1998",
+    "school.tagline": "Raise minds that change the world.",
+    "school.affiliation": "CBSE Affiliated · Marikal · Aff. No. 1300456",
+    "hero.kicker": "CBSE Affiliated · Marikal, Telangana",
+    "hero.title": "Raise minds that change the",
+    "hero.titleAccent": "world.",
+    "hero.subtitle": "A bold, joyful CBSE school where children think for themselves, create fearlessly, and grow into the people the world needs.",
+    "hero.image": "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1100&q=80&auto=format&fit=crop",
+    "stats.s1.value": "27",
+    "stats.s1.label": "Years shaping futures",
+    "stats.s2.value": "2,400+",
+    "stats.s2.label": "Students & dreamers",
+    "stats.s3.value": "98%",
+    "stats.s3.label": "Board pass rate",
+    "stats.s4.value": "130+",
+    "stats.s4.label": "Mentors & coaches",
+    "about.eyebrow": "Our Belief",
+    "about.title": "We don't fill buckets. We light fires.",
+    "about.body1": "Since 1998, Oxford Grammar School has grown into one of the region's most loved schools — by holding on to one idea: every child is extraordinary when someone truly believes in them.",
+    "about.body2": "Our classrooms blend deep academics with art, sport, and real-world projects — so students leave us curious, kind, and unstoppable.",
+    "about.image": "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=1200&q=80&auto=format&fit=crop",
+    "principal.name": "Dr. Lakshmi Prasad",
+    "principal.message": "At Oxford Grammar School we believe education is not preparation for life — it is life itself. Every member of our faculty is committed to nurturing confident, compassionate and capable young people who will lead with integrity.",
+    "principal.photo": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&auto=format&fit=crop",
+    "contact.address": "Oxford Grammar School, Marikal, Narayanpet District, Telangana 509210",
+    "contact.phone": "+91 90000 00001",
+    "contact.email": "hello@oxfordgrammar.edu.in",
+    "contact.mapUrl": "https://www.google.com/maps?q=Marikal,Telangana&output=embed",
+    "social.instagram": "#",
+    "social.facebook": "#",
+    "social.youtube": "#",
+    "disc.affiliationNo": "1300456",
+    "disc.schoolCode": "45123",
+    "disc.affiliationValid": "31-03-2027",
+    "disc.trustName": "Oxford Grammar School Educational Society (Regd.)",
+    "disc.principalName": "Dr. Lakshmi Prasad",
+    "disc.principalQual": "M.Sc., M.Ed., Ph.D.",
+    "disc.email": "principal@oxfordgrammar.edu.in",
+    "disc.phone": "+91 90000 00001",
+    "disc.address": "Oxford Grammar School, Marikal, Narayanpet District, Telangana 509210",
+    "disc.totalArea": "48,562",
+    "disc.builtArea": "12,140",
+    "disc.playground": "9,200",
+    "disc.classrooms": "62",
+    "disc.labs": "8",
+    "disc.libraryBooks": "10,400",
+    "disc.internet": "Yes — 200 Mbps leased line",
+    "disc.totalTeachers": "132",
+    "disc.pgt": "34",
+    "disc.tgt": "58",
+    "disc.prt": "40",
+    "disc.ratio": "1:18"
+  },
+  "gallery": [
+    {
+      "id": "cmqzhz22g001i1ks37219inhj",
+      "title": "Central Library",
+      "category": "Academics",
+      "url": "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=900&q=80&auto=format&fit=crop",
+      "sort": 0
+    },
+    {
+      "id": "cmqzhz22j001j1ks3dz6lfarq",
+      "title": "Science Laboratories",
+      "category": "Academics",
+      "url": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=900&q=80&auto=format&fit=crop",
+      "sort": 1
+    },
+    {
+      "id": "cmqzhz22m001k1ks35l7euxdb",
+      "title": "Art & Design Studio",
+      "category": "Arts",
+      "url": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=900&q=80&auto=format&fit=crop",
+      "sort": 2
+    },
+    {
+      "id": "cmqzhz22p001l1ks3qvx8qb4a",
+      "title": "Sports Arena",
+      "category": "Sports",
+      "url": "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=900&q=80&auto=format&fit=crop",
+      "sort": 3
+    },
+    {
+      "id": "cmqzhz22s001m1ks3m8f69xxr",
+      "title": "Robotics & AI Lab",
+      "category": "Academics",
+      "url": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=900&q=80&auto=format&fit=crop",
+      "sort": 4
+    },
+    {
+      "id": "cmqzhz22v001n1ks3w5k6jtyv",
+      "title": "Annual Day Celebrations",
+      "category": "Events",
+      "url": "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=900&q=80&auto=format&fit=crop",
+      "sort": 5
+    },
+    {
+      "id": "cmqzhz22y001o1ks3dqnrba5c",
+      "title": "Smart Classrooms",
+      "category": "Campus",
+      "url": "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&q=80&auto=format&fit=crop",
+      "sort": 6
+    },
+    {
+      "id": "cmqzhz231001p1ks3vte2701n",
+      "title": "Green Campus",
+      "category": "Campus",
+      "url": "https://images.unsplash.com/photo-1562774053-701939374585?w=900&q=80&auto=format&fit=crop",
+      "sort": 7
+    }
+  ],
+  "news": [
+    {
+      "id": "cmqzhz23c001s1ks3we2gg77m",
+      "title": "Annual Sports Meet 2025",
+      "slug": "annual-sports-meet-2025",
+      "excerpt": "Three days of athletics, team spirit and record-breaking performances on the field.",
+      "body": "Our Annual Sports Meet brought the whole campus alive with three days of athletics, relays and inter-house championships. Thank you to all the parents who cheered from the stands and to our PE department for a flawlessly organised event.",
+      "coverUrl": "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1000&q=80&auto=format&fit=crop",
+      "category": "Event",
+      "published": true,
+      "date": "2026-06-29T17:34:16.153Z"
+    },
+    {
+      "id": "cmqzhz239001r1ks3ojj5kokg",
+      "title": "Vidya Niketan Wins State Science Olympiad",
+      "slug": "state-science-olympiad-winners",
+      "excerpt": "Our students swept the top three positions at the State Science Olympiad 2025.",
+      "body": "A proud moment for the Vidya Niketan family — our young scientists secured the top three positions at the State Science Olympiad 2025, competing against more than 200 schools. Congratulations to our students and mentors for this outstanding achievement.",
+      "coverUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1000&q=80&auto=format&fit=crop",
+      "category": "Achievement",
+      "published": true,
+      "date": "2026-06-29T17:34:16.149Z"
+    },
+    {
+      "id": "cmqzhz235001q1ks3n0fq88h5",
+      "title": "Admissions Open for 2026–27",
+      "slug": "admissions-open-2026-27",
+      "excerpt": "Applications are now open for Nursery to Grade 10. Limited seats — book a campus visit today.",
+      "body": "We are delighted to announce that admissions for the academic year 2026–27 are now open across all grades from Nursery to Grade 10. Prospective parents are invited to book a guided campus visit and meet our faculty. Seats are limited and offered on a first-come basis subject to an interaction.",
+      "coverUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1000&q=80&auto=format&fit=crop",
+      "category": "Announcement",
+      "published": true,
+      "date": "2026-06-29T17:34:16.146Z"
+    }
+  ],
+  "results": [
+    {
+      "id": "cmqzhz23h001t1ks3v09riiob",
+      "year": "2024-25",
+      "classLevel": "X",
+      "appeared": 218,
+      "passed": 218,
+      "passPercent": 100,
+      "topperName": "Ananya Reddy",
+      "topperScore": "98.6%",
+      "sort": 0
+    },
+    {
+      "id": "cmqzhz23l001u1ks3sc1vzo63",
+      "year": "2023-24",
+      "classLevel": "X",
+      "appeared": 205,
+      "passed": 203,
+      "passPercent": 99,
+      "topperName": "Rohan Verma",
+      "topperScore": "98.2%",
+      "sort": 1
+    },
+    {
+      "id": "cmqzhz23p001v1ks3phusfuao",
+      "year": "2022-23",
+      "classLevel": "X",
+      "appeared": 196,
+      "passed": 192,
+      "passPercent": 97.9,
+      "topperName": "Sahithi Rao",
+      "topperScore": "97.8%",
+      "sort": 2
+    }
+  ],
+  "faculty": [
+    {
+      "name": "Dr. Lakshmi Prasad",
+      "designation": "Principal",
+      "qualification": "M.Sc., M.Ed., Ph.D.",
+      "subject": "Administration",
+      "photoUrl": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80&auto=format&fit=crop",
+      "sort": 0
+    },
+    {
+      "name": "Mr. Suresh Kumar",
+      "designation": "Vice Principal",
+      "qualification": "M.A., B.Ed.",
+      "subject": "English",
+      "photoUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80&auto=format&fit=crop",
+      "sort": 1
+    },
+    {
+      "name": "Mrs. Padma Nair",
+      "designation": "Head of Science",
+      "qualification": "M.Sc., B.Ed.",
+      "subject": "Physics",
+      "photoUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=400&q=80&auto=format&fit=crop",
+      "sort": 2
+    },
+    {
+      "name": "Mr. Arjun Menon",
+      "designation": "Senior Teacher",
+      "qualification": "M.Sc., B.Ed.",
+      "subject": "Mathematics",
+      "photoUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80&auto=format&fit=crop",
+      "sort": 3
+    },
+    {
+      "name": "Mrs. Sneha Iyer",
+      "designation": "Coordinator — Primary",
+      "qualification": "M.A., B.Ed.",
+      "subject": "Primary",
+      "photoUrl": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80&auto=format&fit=crop",
+      "sort": 4
+    },
+    {
+      "name": "Mr. David Thomas",
+      "designation": "Sports Director",
+      "qualification": "M.P.Ed.",
+      "subject": "Physical Education",
+      "photoUrl": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=400&q=80&auto=format&fit=crop",
+      "sort": 5
+    }
+  ],
+  "disclosureDocs": [
+    {
+      "label": "Copy of Affiliation / Upgradation Letter and recent extension of affiliation, if any",
+      "fileUrl": null,
+      "note": "Available on request at the school office",
+      "sort": 0
+    },
+    {
+      "label": "Copy of societal/trust/company registration / renewal certificate, as applicable",
+      "fileUrl": null,
+      "note": "Available on request at the school office",
+      "sort": 1
+    },
+    {
+      "label": "Copy of No Objection Certificate (NOC) issued, if applicable, by the State Govt./UT",
+      "fileUrl": null,
+      "note": "Available on request at the school office",
+      "sort": 2
+    },
+    {
+      "label": "Copy of recognition certificate under RTE Act, 2009",
+      "fileUrl": null,
+      "note": "Available on request at the school office",
+      "sort": 3
+    },
+    {
+      "label": "Copy of valid Building Safety Certificate as per the national building code",
+      "fileUrl": null,
+      "note": "Available on request at the school office",
+      "sort": 4
+    },
+    {
+      "label": "Copy of valid Fire Safety Certificate issued by the competent authority",
+      "fileUrl": null,
+      "note": "Available on request at the school office",
+      "sort": 5
+    },
+    {
+      "label": "Copy of the DEO certificate submitted by the school for affiliation/upgradation/extension",
+      "fileUrl": null,
+      "note": "Available on request at the school office",
+      "sort": 6
+    },
+    {
+      "label": "Copies of valid Water, Health and Sanitation certificates",
+      "fileUrl": null,
+      "note": "Available on request at the school office",
+      "sort": 7
+    }
+  ]
+}

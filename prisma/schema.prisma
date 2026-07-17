@@ -1,0 +1,98 @@
+// Vidya Niketan v3 — data model
+// Core CMS: site content, gallery, news, board results, faculty,
+// CBSE Mandatory Public Disclosure (docs), and the enquiry inbox.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Admin / editor accounts for the login + CMS.
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         String   @default("editor") // "admin" | "editor"
+  createdAt    DateTime @default(now())
+}
+
+// Flexible key/value store for editable site copy + CBSE general info
+// and infrastructure fields (e.g. "hero.title", "disclosure.affiliationNo").
+model Setting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String   @default("")
+  updatedAt DateTime @updatedAt
+}
+
+model GalleryImage {
+  id        String   @id @default(cuid())
+  title     String
+  category  String   @default("Campus")
+  url       String
+  sort      Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+model News {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  excerpt   String   @default("")
+  body      String   @default("")
+  coverUrl  String?
+  category  String   @default("Announcement") // Announcement | Event | Achievement | Circular
+  published Boolean  @default(true)
+  date      DateTime @default(now())
+  createdAt DateTime @default(now())
+}
+
+// Board results — also powers the CBSE disclosure results table.
+model BoardResult {
+  id           String  @id @default(cuid())
+  year         String  // e.g. "2024-25"
+  classLevel   String  @default("X") // "X" | "XII"
+  appeared     Int     @default(0)
+  passed       Int     @default(0)
+  passPercent  Float   @default(0)
+  topperName   String?
+  topperScore  String?
+  sort         Int     @default(0)
+}
+
+model Faculty {
+  id            String  @id @default(cuid())
+  name          String
+  designation   String  @default("Teacher")
+  qualification String  @default("")
+  subject       String  @default("")
+  photoUrl      String?
+  sort          Int     @default(0)
+}
+
+// CBSE Mandatory Public Disclosure — Documents & Information table.
+model DisclosureDoc {
+  id        String   @id @default(cuid())
+  label     String   // e.g. "Copy of Affiliation/Upgradation Letter"
+  fileUrl   String?  // uploaded PDF/image
+  note      String   @default("")
+  sort      Int      @default(0)
+  updatedAt DateTime @updatedAt
+}
+
+// Admission / contact enquiries captured from public forms.
+model Enquiry {
+  id        String   @id @default(cuid())
+  name      String
+  phone     String
+  email     String?
+  grade     String   @default("")
+  message   String   @default("")
+  handled   Boolean  @default(false)
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #faf7f0;
+  --foreground: #0a1f3c;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-ink font-sans antialiased;
+  }
+  ::selection {
+    background: #c79a3e;
+    color: #fff;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-gold;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/60;
+  }
+  .btn-gold {
+    @apply btn bg-gold text-ink-950 shadow-gold hover:bg-gold-light hover:-translate-y-0.5;
+  }
+  .btn-ink {
+    @apply btn bg-ink text-cream hover:bg-ink-800 hover:-translate-y-0.5;
+  }
+  .btn-outline {
+    @apply btn border border-ink/20 text-ink hover:border-ink hover:bg-ink hover:text-cream;
+  }
+  .btn-ghost-light {
+    @apply btn border border-white/30 text-white hover:bg-white/10;
+  }
+  .card {
+    @apply rounded-3xl border border-ink/10 bg-white shadow-card;
+  }
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-ink/70;
+  }
+  .field {
+    @apply w-full rounded-xl border border-ink/15 bg-white px-4 py-2.5 text-sm text-ink outline-none transition focus:border-gold focus:ring-2 focus:ring-gold/30;
+  }
+  .section {
+    @apply py-20 sm:py-28;
+  }
+  .display-h2 {
+    @apply font-display text-3xl font-semibold leading-[1.08] tracking-tight text-ink sm:text-5xl;
+  }
+  .prose-ink p {
+    @apply text-ink/70 leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Decorative paper grain */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

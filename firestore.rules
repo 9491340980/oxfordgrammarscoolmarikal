@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Public website content:
+    //  - anyone may READ (it's a public website)
+    //  - only signed-in staff may WRITE. Accounts are created only by you in the
+    //    Firebase console (Email/Password has no public sign-up), so any
+    //    authenticated user is trusted staff.
+    match /site/{doc} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+  }
+}

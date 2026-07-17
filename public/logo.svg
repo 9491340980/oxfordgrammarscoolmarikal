@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <path id="topArc" d="M 70,256 A 186,186 0 0 1 442,256" />
+    <clipPath id="field"><circle cx="256" cy="256" r="244"/></clipPath>
+  </defs>
+
+  <!-- rings -->
+  <circle cx="256" cy="256" r="250" fill="#ffffff"/>
+  <circle cx="256" cy="256" r="250" fill="none" stroke="#0d2547" stroke-width="7"/>
+  <circle cx="256" cy="256" r="236" fill="none" stroke="#c8282d" stroke-width="6"/>
+
+  <!-- curved school name -->
+  <text font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700"
+        fill="#0d2547" letter-spacing="2" text-anchor="middle">
+    <textPath href="#topArc" startOffset="50%">OXFORD GRAMMAR SCHOOL</textPath>
+  </text>
+
+  <!-- green bottom band -->
+  <g clip-path="url(#field)">
+    <path d="M 30,372 Q 256,338 482,372 L 482,512 L 30,512 Z" fill="#147a3e"/>
+  </g>
+  <text x="256" y="430" font-family="Arial, sans-serif" font-size="38" font-weight="700"
+        fill="#ffffff" letter-spacing="2" text-anchor="middle">CBSE, MARIKAL</text>
+
+  <!-- emblem: figures / flame -->
+  <circle cx="256" cy="128" r="22" fill="#0d2547"/>
+  <circle cx="196" cy="186" r="17" fill="#e8474c"/>
+  <circle cx="316" cy="186" r="17" fill="#e8474c"/>
+  <!-- left arm/figure -->
+  <path d="M256,316 C206,276 196,214 232,176 C250,206 256,214 256,232 C256,214 250,206 280,176 C316,214 306,276 256,316 Z"
+        fill="#e8474c"/>
+  <path d="M200,210 C214,250 236,280 256,300 C236,272 226,242 224,206 Z" fill="#e8474c"/>
+  <path d="M312,210 C298,250 276,280 256,300 C276,272 286,242 288,206 Z" fill="#e8474c"/>
+
+  <!-- orange swoosh -->
+  <path d="M150,300 Q256,346 362,300" fill="none" stroke="#f1a52b" stroke-width="9" stroke-linecap="round"/>
+</svg>
