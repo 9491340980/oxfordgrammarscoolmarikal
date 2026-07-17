@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { SITE_URL } from "@/lib/seo";
+import CanonicalRedirect from "@/components/CanonicalRedirect";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -65,6 +66,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${sans.variable}`}>
       <body className="grain">
+        <CanonicalRedirect />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
