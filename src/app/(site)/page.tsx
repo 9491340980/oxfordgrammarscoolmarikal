@@ -22,7 +22,7 @@ const JOURNEY = [
   { no: "03", tint: "bg-leaf text-white", name: "Secondary Wing", grade: "Grade 9 – 10", desc: "Focused boards, career guidance & one-on-one mentoring." },
 ];
 
-const STAT_TINTS = ["text-coral", "text-leaf", "text-amber", "text-ink"];
+const STAT_TINTS = ["text-coral-light", "text-leaf-light", "text-amber", "text-gold-light"];
 
 export default function HomePage() {
   const s = useSite();
@@ -39,9 +39,9 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-cream pt-[72px]">
-        <div className="pointer-events-none absolute -right-40 -top-20 h-[520px] w-[520px] rounded-full bg-amber/35 blur-3xl" />
-        <div className="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-coral/25 blur-3xl" />
+      <section className="relative overflow-hidden bg-gradient-to-b from-amber-soft/60 via-cream to-white pt-[72px]">
+        <div className="pointer-events-none absolute -right-40 -top-20 h-[520px] w-[520px] rounded-full bg-amber/40 blur-3xl" />
+        <div className="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-coral/30 blur-3xl" />
         <div className="pointer-events-none absolute bottom-10 right-1/3 h-[300px] w-[300px] rounded-full bg-leaf/25 blur-3xl" />
         <div className="container-x grid items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           <div>
@@ -71,7 +71,8 @@ export default function HomePage() {
           </div>
 
           <Reveal className="relative" y={28}>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-soft">
+            <div className="absolute -inset-3 -rotate-2 rounded-[2.2rem] bg-gradient-to-br from-coral/30 via-amber/20 to-leaf/25" />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-card ring-4 ring-white">
               <Image src={c["hero.image"]} alt="Students at Oxford Grammar School" fill className="object-cover" priority sizes="(max-width:1024px) 100vw, 50vw" />
             </div>
             <div className="absolute -left-4 bottom-10 flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3 shadow-card backdrop-blur">
@@ -124,17 +125,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* STATS BAND */}
-      <section className="bg-cream py-16">
-        <div className="container-x grid grid-cols-2 gap-5 md:grid-cols-4">
-          {stats.map((s, i) => (
-            <Reveal key={s.label} delay={i * 0.08}>
-              <div className="h-full rounded-3xl border border-ink/10 bg-white p-6 text-center shadow-soft">
-                <div className={`font-display text-4xl font-semibold sm:text-5xl ${STAT_TINTS[i % 4]}`}>{s.value}</div>
-                <div className="mt-2 text-sm text-ink/50">{s.label}</div>
-              </div>
-            </Reveal>
-          ))}
+      {/* STATS BAND — rich colourful anchor */}
+      <section className="relative overflow-hidden bg-ink-950 py-20 text-white">
+        <div className="pointer-events-none absolute -left-20 top-0 h-72 w-72 rounded-full bg-coral/30 blur-3xl" />
+        <div className="pointer-events-none absolute right-0 top-10 h-72 w-72 rounded-full bg-leaf/25 blur-3xl" />
+        <div className="pointer-events-none absolute bottom-0 left-1/2 h-72 w-72 rounded-full bg-amber/20 blur-3xl" />
+        <div className="container-x relative">
+          <Reveal className="mx-auto mb-12 max-w-2xl text-center">
+            <p className="eyebrow !bg-white/15 !text-white">By the numbers</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold sm:text-4xl">A school parents trust.</h2>
+          </Reveal>
+          <div className="grid grid-cols-2 gap-5 md:grid-cols-4">
+            {stats.map((s, i) => (
+              <Reveal key={s.label} delay={i * 0.08}>
+                <div className="glass h-full p-6 text-center transition hover:-translate-y-1 hover:bg-white/[0.14]">
+                  <div className={`font-display text-4xl font-bold sm:text-5xl ${STAT_TINTS[i % 4]}`}>{s.value}</div>
+                  <div className="mt-2 text-sm text-white/60">{s.label}</div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -212,29 +222,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* RESULTS */}
-      <section className="section bg-cream">
-        <div className="container-x grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+      {/* RESULTS — vibrant success band */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0f8a45] via-leaf to-[#0c6f39] py-20 text-white sm:py-28">
+        <div className="pointer-events-none absolute -right-24 -top-16 h-80 w-80 rounded-full bg-leaf-light/25 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-20 left-10 h-72 w-72 rounded-full bg-amber/20 blur-3xl" />
+        <div className="container-x relative grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:items-center">
           <Reveal>
-            <p className="eyebrow">Proven Results</p>
-            <h2 className="display-h2 mt-3">Three years. Outstanding boards.</h2>
-            <p className="mt-5 max-w-md text-ink/60">
+            <p className="eyebrow !bg-white/15 !text-white">🏆 Proven Results</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold leading-tight sm:text-5xl">
+              Three years. Outstanding boards.
+            </h2>
+            <p className="mt-5 max-w-md text-white/80">
               Our Class X students consistently rank among the region's best — built on mentoring, not pressure.
             </p>
-            <Link href="/academics" className="btn-gold mt-8">See Academics →</Link>
+            <Link href="/academics" className="btn mt-8 bg-white text-leaf hover:-translate-y-0.5 hover:bg-cream">
+              See Academics →
+            </Link>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="grid gap-4 sm:grid-cols-3">
               {results.map((r) => (
-                <div key={r.id} className="card overflow-hidden p-0 text-center">
-                  <div className="bg-leaf-soft py-2 text-xs font-semibold uppercase tracking-wider text-leaf">{r.year}</div>
-                  <div className="p-6">
-                    <div className="font-display text-4xl font-semibold text-leaf">{r.passPercent}%</div>
-                    <div className="mt-1 text-xs text-ink/50">Pass · Class {r.classLevel}</div>
-                    <div className="mt-4 border-t border-ink/10 pt-3 text-sm text-ink/70">
-                      🏆 Topper {r.topperScore}<br />
-                      <span className="text-ink/50">{r.topperName}</span>
-                    </div>
+                <div key={r.id} className="glass p-6 text-center transition hover:-translate-y-1 hover:bg-white/[0.16]">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-white/60">{r.year}</div>
+                  <div className="mt-2 font-display text-4xl font-bold text-white">{r.passPercent}%</div>
+                  <div className="mt-1 text-xs text-white/60">Pass · Class {r.classLevel}</div>
+                  <div className="mt-4 border-t border-white/15 pt-3 text-sm text-white/80">
+                    🏆 {r.topperScore}<br />
+                    <span className="text-white/60">{r.topperName}</span>
                   </div>
                 </div>
               ))}

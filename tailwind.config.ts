@@ -32,10 +32,12 @@ const config: Config = {
         // Pulled from the school crest — the brand's real colours.
         coral: {
           DEFAULT: "#f0523a",
+          light: "#ff8a6e",
           soft: "#ffd8d0",
         },
         leaf: {
           DEFAULT: "#12a150",
+          light: "#4ade80",
           soft: "#c6f2d8",
         },
         amber: {
