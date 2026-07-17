@@ -38,6 +38,7 @@ export default function AdmissionsPage() {
         eyebrow="Admissions Open · 2026–27"
         title="Begin your child's journey with us."
         subtitle="Nursery to Grade 10. Limited seats, offered on a first-come basis subject to a friendly interaction."
+        image={c["hero.image"]}
       />
 
       {/* Process */}
@@ -62,7 +63,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Docs + Fees */}
-      <section className="section bg-cream-dark">
+      <section className="section bg-mint">
         <div className="container-x grid gap-8 lg:grid-cols-2">
           <Reveal className="card p-8">
             <p className="eyebrow">Documents required</p>
@@ -95,22 +96,22 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Enquiry */}
-      <section className="section bg-ink-950 text-cream">
+      <section className="section bg-white">
         <div className="container-x grid gap-10 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <p className="eyebrow">Enquire now</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-5xl">Let&apos;s talk.</h2>
-            <p className="mt-5 max-w-md text-cream/60">
+            <h2 className="display-h2 mt-3">Let&apos;s talk.</h2>
+            <p className="mt-5 max-w-md text-ink/60">
               Share a few details and our admissions team will call you within one working day.
             </p>
-            <div className="mt-8 space-y-2 text-sm text-cream/70">
+            <div className="mt-8 space-y-2 text-sm text-ink/70">
               <p>📞 <a href={`tel:${c["contact.phone"]}`} className="hover:text-gold">{c["contact.phone"]}</a></p>
               <p>✉️ <a href={`mailto:${c["contact.email"]}`} className="hover:text-gold">{c["contact.email"]}</a></p>
               <p>📍 {c["contact.address"]}</p>
             </div>
           </Reveal>
-          <Reveal delay={0.1} className="rounded-3xl bg-white/5 p-6 backdrop-blur">
-            <EnquiryForm dark accessKey={c["forms.accessKey"]} toEmail={c["contact.email"]} />
+          <Reveal delay={0.1} className="card p-6">
+            <EnquiryForm accessKey={c["forms.accessKey"]} toEmail={c["contact.email"]} />
           </Reveal>
         </div>
       </section>

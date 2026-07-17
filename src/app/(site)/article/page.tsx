@@ -26,14 +26,14 @@ function Article() {
   return (
     <article className="pt-[72px]">
       <DocTitle text={n.title} />
-      <div className="bg-ink-950 text-cream">
+      <div className="bg-cream">
         <div className="container-x py-14">
-          <Link href="/news" className="text-sm text-cream/60 hover:text-gold">← Back to News</Link>
+          <Link href="/news" className="text-sm text-ink/50 hover:text-gold">← Back to News</Link>
           <div className="mt-4 flex items-center gap-2 text-xs">
             <span className="font-semibold uppercase tracking-wide text-gold">{n.category}</span>
-            <span className="text-cream/40">· {date}</span>
+            <span className="text-ink/40">· {date}</span>
           </div>
-          <h1 className="mt-3 max-w-3xl font-display text-3xl font-semibold leading-tight sm:text-5xl">{n.title}</h1>
+          <h1 className="mt-3 max-w-3xl font-display text-3xl font-semibold leading-tight text-ink sm:text-5xl">{n.title}</h1>
         </div>
       </div>
 

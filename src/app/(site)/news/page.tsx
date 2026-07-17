@@ -6,6 +6,7 @@ import { useSite } from "@/lib/site-content";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import DocTitle from "@/components/DocTitle";
+import CategoryChip from "@/components/CategoryChip";
 
 function fmt(d: string) {
   return new Date(d).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" });
@@ -34,11 +35,11 @@ export default function NewsPage() {
                       </div>
                     )}
                     <div className="p-6">
-                      <div className="flex items-center gap-2 text-xs">
-                        <span className="font-semibold uppercase tracking-wide text-gold">{n.category}</span>
-                        <span className="text-ink/40">· {fmt(n.date)}</span>
+                      <div className="flex flex-wrap items-center gap-2 text-xs">
+                        <CategoryChip category={n.category} />
+                        <span className="text-ink/40">{fmt(n.date)}</span>
                       </div>
-                      <h3 className="mt-2 text-lg font-semibold leading-snug text-ink group-hover:text-gold">{n.title}</h3>
+                      <h3 className="mt-3 text-lg font-semibold leading-snug text-ink group-hover:text-gold">{n.title}</h3>
                       <p className="mt-2 text-sm leading-relaxed text-ink/60 line-clamp-3">{n.excerpt}</p>
                     </div>
                   </Link>

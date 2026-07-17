@@ -18,13 +18,29 @@ const config: Config = {
           950: "#050f1f",
         },
         gold: {
-          DEFAULT: "#c79a3e",
-          light: "#e3c172",
-          soft: "#f0e3c2",
+          DEFAULT: "#e2a018",
+          light: "#f6c445",
+          soft: "#fce6ab",
         },
+        // Fresh tints used to alternate sections (replaces the dull beige).
         cream: {
-          DEFAULT: "#faf7f0",
-          dark: "#f3ede0",
+          DEFAULT: "#fff4e2",
+          dark: "#ffe9c9",
+        },
+        mint: "#dcf7e7",
+        sky: "#e2edfd",
+        // Pulled from the school crest — the brand's real colours.
+        coral: {
+          DEFAULT: "#f0523a",
+          soft: "#ffd8d0",
+        },
+        leaf: {
+          DEFAULT: "#12a150",
+          soft: "#c6f2d8",
+        },
+        amber: {
+          DEFAULT: "#fbaa2a",
+          soft: "#ffe3b0",
         },
       },
       fontFamily: {

@@ -37,7 +37,8 @@ const FACILITIES = [
 ];
 
 export default function AcademicsPage() {
-  const { results } = useSite();
+  const { results, gallery } = useSite();
+  const heroImg = (gallery.find((g) => g.category === "Academics") ?? gallery[0])?.url;
   return (
     <>
       <DocTitle text="Academics" />
@@ -45,6 +46,7 @@ export default function AcademicsPage() {
         eyebrow="Academics"
         title="Deep learning, joyfully delivered."
         subtitle="A CBSE curriculum that balances rigour with creativity — so students leave us curious, confident and college-ready."
+        image={heroImg}
       />
 
       {/* Wings */}
@@ -70,7 +72,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* Facilities */}
-      <section className="section bg-cream-dark">
+      <section className="section bg-mint">
         <div className="container-x">
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Facilities</p>
@@ -90,15 +92,15 @@ export default function AcademicsPage() {
       </section>
 
       {/* Board Results */}
-      <section className="section bg-ink-950 text-cream">
+      <section className="section bg-white">
         <div className="container-x">
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Board Results</p>
-            <h2 className="mt-3 font-display text-3xl font-semibold sm:text-5xl">Three years of excellence.</h2>
+            <h2 className="display-h2 mt-3">Three years of excellence.</h2>
           </Reveal>
-          <div className="mt-10 overflow-x-auto rounded-2xl border border-white/10">
+          <div className="mt-10 overflow-x-auto rounded-2xl border border-ink/10 bg-white shadow-soft">
             <table className="w-full min-w-[640px] text-left text-sm">
-              <thead className="bg-white/5 text-cream/60">
+              <thead className="bg-cream text-ink/60">
                 <tr>
                   <th className="px-5 py-4 font-semibold">Year</th>
                   <th className="px-5 py-4 font-semibold">Class</th>
@@ -108,14 +110,14 @@ export default function AcademicsPage() {
                   <th className="px-5 py-4 font-semibold">Topper</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/10">
+              <tbody className="divide-y divide-ink/10 text-ink/70">
                 {results.map((r) => (
-                  <tr key={r.id} className="hover:bg-white/5">
-                    <td className="px-5 py-4 font-medium text-cream">{r.year}</td>
+                  <tr key={r.id} className="hover:bg-cream/60">
+                    <td className="px-5 py-4 font-medium text-ink">{r.year}</td>
                     <td className="px-5 py-4">{r.classLevel}</td>
                     <td className="px-5 py-4">{r.appeared}</td>
                     <td className="px-5 py-4">{r.passed}</td>
-                    <td className="px-5 py-4 font-semibold text-gold-light">{r.passPercent}%</td>
+                    <td className="px-5 py-4 font-semibold text-gold">{r.passPercent}%</td>
                     <td className="px-5 py-4">{r.topperName} {r.topperScore && `· ${r.topperScore}`}</td>
                   </tr>
                 ))}

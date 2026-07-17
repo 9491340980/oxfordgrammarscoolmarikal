@@ -62,10 +62,10 @@ export default function DisclosurePage() {
             <div className="overflow-x-auto rounded-xl border border-ink/10">
               <table className="w-full min-w-[560px] border-collapse">
                 <thead>
-                  <tr className="bg-ink-950 text-left text-sm text-cream">
-                    <th className="border border-white/10 px-4 py-3 font-semibold">S. No.</th>
-                    <th className="border border-white/10 px-4 py-3 font-semibold">Document / Information</th>
-                    <th className="border border-white/10 px-4 py-3 font-semibold">Status</th>
+                  <tr className="bg-cream text-left text-sm text-ink">
+                    <th className="border border-ink/10 px-4 py-3 font-semibold">S. No.</th>
+                    <th className="border border-ink/10 px-4 py-3 font-semibold">Document / Information</th>
+                    <th className="border border-ink/10 px-4 py-3 font-semibold">Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -96,12 +96,12 @@ export default function DisclosurePage() {
             <div className="overflow-x-auto rounded-xl border border-ink/10">
               <table className="w-full min-w-[560px] border-collapse">
                 <thead>
-                  <tr className="bg-ink-950 text-left text-sm text-cream">
-                    <th className="border border-white/10 px-4 py-3 font-semibold">Year</th>
-                    <th className="border border-white/10 px-4 py-3 font-semibold">Class</th>
-                    <th className="border border-white/10 px-4 py-3 font-semibold">No. Registered</th>
-                    <th className="border border-white/10 px-4 py-3 font-semibold">No. Passed</th>
-                    <th className="border border-white/10 px-4 py-3 font-semibold">Pass %</th>
+                  <tr className="bg-cream text-left text-sm text-ink">
+                    <th className="border border-ink/10 px-4 py-3 font-semibold">Year</th>
+                    <th className="border border-ink/10 px-4 py-3 font-semibold">Class</th>
+                    <th className="border border-ink/10 px-4 py-3 font-semibold">No. Registered</th>
+                    <th className="border border-ink/10 px-4 py-3 font-semibold">No. Passed</th>
+                    <th className="border border-ink/10 px-4 py-3 font-semibold">Pass %</th>
                   </tr>
                 </thead>
                 <tbody>

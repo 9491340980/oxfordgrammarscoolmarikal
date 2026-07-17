@@ -31,6 +31,7 @@ export default function AboutPage() {
         eyebrow="About Us"
         title="A school built on belief, not pressure."
         subtitle={`Since ${c["school.estd"]}, ${c["school.name"]} has grown into one of the region's most-loved CBSE schools — by holding on to one idea.`}
+        image={c["about.image"]}
       />
 
       <section className="section bg-cream">
@@ -52,17 +53,17 @@ export default function AboutPage() {
       </section>
 
       {/* Vision / Mission */}
-      <section className="section bg-ink-950 text-cream">
+      <section className="section bg-cream">
         <div className="container-x grid gap-8 md:grid-cols-2">
-          <Reveal className="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <Reveal className="rounded-3xl border border-gold/25 bg-gold-soft/30 p-8">
             <p className="eyebrow">Our Vision</p>
-            <p className="mt-4 font-display text-2xl leading-snug">
+            <p className="mt-4 font-display text-2xl leading-snug text-ink">
               To raise confident, compassionate and capable young people who think for themselves and act for others.
             </p>
           </Reveal>
-          <Reveal delay={0.1} className="rounded-3xl border border-white/10 bg-white/5 p-8">
+          <Reveal delay={0.1} className="rounded-3xl border border-gold/25 bg-gold-soft/30 p-8">
             <p className="eyebrow">Our Mission</p>
-            <p className="mt-4 font-display text-2xl leading-snug">
+            <p className="mt-4 font-display text-2xl leading-snug text-ink">
               To blend deep academics with art, sport and real-world learning — in a safe, joyful, future-ready campus.
             </p>
           </Reveal>

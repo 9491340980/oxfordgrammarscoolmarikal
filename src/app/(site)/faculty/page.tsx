@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 import DocTitle from "@/components/DocTitle";
 
 export default function FacultyPage() {
-  const { faculty, content: c } = useSite();
+  const { faculty, content: c, gallery } = useSite();
 
   return (
     <>
@@ -16,6 +16,7 @@ export default function FacultyPage() {
         eyebrow="Our People"
         title="Teachers who know every child by name."
         subtitle={`${c["disc.totalTeachers"]} mentors and coaches, a teacher–student ratio of ${c["disc.ratio"]}, and a shared belief in every child.`}
+        image={gallery[0]?.url}
       />
 
       <section className="section bg-cream">
@@ -27,7 +28,7 @@ export default function FacultyPage() {
                   {f.photoUrl ? (
                     <Image src={f.photoUrl} alt={f.name} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width:768px) 100vw, 33vw" />
                   ) : (
-                    <div className="grid h-full place-items-center bg-ink-950 text-3xl text-gold-light">
+                    <div className="grid h-full place-items-center bg-cream text-3xl text-gold">
                       {f.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}
                     </div>
                   )}
