@@ -27,7 +27,11 @@ export const metadata: Metadata = {
   description:
     "Oxford Grammar School, Marikal — a CBSE-affiliated school nurturing curious, confident, future-ready children. Admissions open for 2026–27.",
   keywords: ["Oxford Grammar School", "Oxford Grammar School Marikal", "CBSE school Marikal", "school in Marikal", "Marikal Telangana school", "CBSE admissions Marikal"],
-  icons: { icon: "/logo.png", apple: "/logo.png" },
+  icons: {
+    icon: [{ url: "/logo.png", type: "image/png" }],
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
   alternates: { canonical: "/" },
   openGraph: {
     title: "Oxford Grammar School — CBSE, Marikal",
