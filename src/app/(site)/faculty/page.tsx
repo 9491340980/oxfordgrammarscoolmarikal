@@ -24,9 +24,9 @@ export default function FacultyPage() {
           {faculty.map((f, i) => (
             <Reveal key={i} delay={(i % 3) * 0.06}>
               <article className="card group h-full overflow-hidden text-center">
-                <div className="relative aspect-square overflow-hidden">
+                <div className="relative aspect-[4/5] overflow-hidden bg-cream">
                   {f.photoUrl ? (
-                    <Image src={f.photoUrl} alt={f.name} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width:768px) 100vw, 33vw" />
+                    <Image src={f.photoUrl} alt={f.name} fill className="object-cover object-top transition duration-500 group-hover:scale-105" sizes="(max-width:768px) 100vw, 33vw" />
                   ) : (
                     <div className="grid h-full place-items-center bg-cream text-3xl text-gold">
                       {f.name.split(" ").map((w) => w[0]).slice(0, 2).join("")}

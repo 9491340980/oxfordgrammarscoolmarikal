@@ -30,7 +30,7 @@ const WINGS = [
 const FACILITIES = [
   ["Science Labs", "Physics, Chemistry & Biology labs equipped to CBSE norms."],
   ["Robotics & AI", "Coding, electronics, 3D printing and design thinking."],
-  ["Library", "10,000+ books, periodicals and a quiet reading loft."],
+  ["Library", "A growing library of storybooks, references, encyclopaedias and periodicals."],
   ["Smart Classrooms", "Interactive panels and blended digital learning."],
   ["Sports Arena", "Cricket, athletics, basketball and indoor games."],
   ["Performing Arts", "Music, dance and theatre studios for every child."],

@@ -94,11 +94,11 @@ export default function HomePage() {
             {Array.from({ length: 2 }).map((_, i) => (
               <span key={i} className="flex items-center gap-10">
                 <span>CBSE Affiliated</span><span className="text-gold">✦</span>
-                <span>{c["stats.s1.value"]} Years of Excellence</span><span className="text-gold">✦</span>
-                <span>{c["stats.s2.value"]} Students</span><span className="text-gold">✦</span>
-                <span>{c["disc.totalTeachers"]} Mentors</span><span className="text-gold">✦</span>
-                <span>State Sports Champions</span><span className="text-gold">✦</span>
-                <span>12-Acre Green Campus</span><span className="text-gold">✦</span>
+                <span>Established {c["school.estd"]}</span><span className="text-gold">✦</span>
+                <span>Marikal · Narayanpet</span><span className="text-gold">✦</span>
+                <span>Science · Maths · Computer Labs</span><span className="text-gold">✦</span>
+                <span>Smart Classrooms</span><span className="text-gold">✦</span>
+                <span>Strive for Excellence</span><span className="text-gold">✦</span>
               </span>
             ))}
           </div>
@@ -231,7 +231,7 @@ export default function HomePage() {
           <Reveal>
             <p className="eyebrow !bg-white/15 !text-white">🏆 Proven Results</p>
             <h2 className="mt-4 font-display text-3xl font-semibold leading-tight sm:text-5xl">
-              Three years. Outstanding boards.
+              Our board results.
             </h2>
             <p className="mt-5 max-w-md text-white/80">
               Our Class X students consistently rank among the region's best — built on mentoring, not pressure.

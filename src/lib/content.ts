@@ -90,9 +90,9 @@ export const CONTENT_FIELDS: FieldDef[] = [
 
 export const CONTENT_DEFAULTS: Record<string, string> = {
   "school.name": "Oxford Grammar School",
-  "school.estd": "1998",
-  "school.tagline": "Raise minds that change the world.",
-  "school.affiliation": "CBSE Affiliated · Marikal · Aff. No. 1300456",
+  "school.estd": "2024",
+  "school.tagline": "Strive for Excellence, Shine with Confidence",
+  "school.affiliation": "CBSE Affiliated · Marikal, Narayanpet",
 
   "hero.kicker": "CBSE Affiliated · Marikal, Telangana",
   "hero.title": "Raise minds that change the",
@@ -102,15 +102,15 @@ export const CONTENT_DEFAULTS: Record<string, string> = {
   "hero.image":
     "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1100&q=80&auto=format&fit=crop",
 
-  "stats.s1.value": "27", "stats.s1.label": "Years shaping futures",
-  "stats.s2.value": "2,400+", "stats.s2.label": "Students & dreamers",
-  "stats.s3.value": "98%", "stats.s3.label": "Board pass rate",
-  "stats.s4.value": "130+", "stats.s4.label": "Mentors & coaches",
+  "stats.s1.value": "2024", "stats.s1.label": "Established",
+  "stats.s2.value": "CBSE", "stats.s2.label": "Curriculum",
+  "stats.s3.value": "Co-Ed", "stats.s3.label": "Day School",
+  "stats.s4.value": "Marikal", "stats.s4.label": "Telangana",
 
   "about.eyebrow": "Our Belief",
   "about.title": "We don't fill buckets. We light fires.",
   "about.body1":
-    "Since 1998, Oxford Grammar School has grown into one of the region's most loved schools — by holding on to one idea: every child is extraordinary when someone truly believes in them.",
+    "Founded in 2024, Oxford Grammar School is a CBSE school in Marikal, Narayanpet — built on one belief: every child is extraordinary when someone truly believes in them.",
   "about.body2":
     "Our classrooms blend deep academics with art, sport, and real-world projects — so students leave us curious, kind, and unstoppable.",
   "about.image":

@@ -15,11 +15,9 @@ const VALUES = [
 ];
 
 const TIMELINE = [
-  { y: "1998", t: "The first bell", d: "Oxford Grammar School opens with 84 students and a simple promise: believe in every child." },
-  { y: "2006", t: "CBSE affiliation", d: "Formal CBSE affiliation and our first senior secondary batch." },
-  { y: "2014", t: "New campus", d: "A 12-acre green campus with labs, library and sports arena." },
-  { y: "2021", t: "Future-ready", d: "Robotics, coding and design thinking woven into the curriculum." },
-  { y: "Today", t: "2,400+ strong", d: "One of the region's most-loved schools, with alumni across the world." },
+  { y: "2024", t: "Our beginning", d: "Oxford Grammar School opens in Marikal with a CBSE curriculum and one promise: strive for excellence, shine with confidence." },
+  { y: "2024", t: "Modern facilities", d: "Science, biology, maths and computer labs, a well-stocked library and smart classrooms come to life." },
+  { y: "Today", t: "Growing strong", d: "A young, energetic school giving every child in Marikal a caring, future-ready education." },
 ];
 
 export default function AboutPage() {

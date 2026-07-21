@@ -92,31 +92,39 @@ export default function DisclosurePage() {
           {/* C — Result and Academics */}
           <div>
             <SectionTitle letter="C" title="Result and Academics" />
-            <p className="mb-4 text-sm text-ink/60">Board examination results — last three years.</p>
-            <div className="overflow-x-auto rounded-xl border border-ink/10">
-              <table className="w-full min-w-[560px] border-collapse">
-                <thead>
-                  <tr className="bg-cream text-left text-sm text-ink">
-                    <th className="border border-ink/10 px-4 py-3 font-semibold">Year</th>
-                    <th className="border border-ink/10 px-4 py-3 font-semibold">Class</th>
-                    <th className="border border-ink/10 px-4 py-3 font-semibold">No. Registered</th>
-                    <th className="border border-ink/10 px-4 py-3 font-semibold">No. Passed</th>
-                    <th className="border border-ink/10 px-4 py-3 font-semibold">Pass %</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {results.map((r) => (
-                    <tr key={r.id} className="hover:bg-cream-dark/50">
-                      <td className="border border-ink/10 px-4 py-3 text-sm text-ink/80">{r.year}</td>
-                      <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{r.classLevel}</td>
-                      <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{r.appeared}</td>
-                      <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{r.passed}</td>
-                      <td className="border border-ink/10 px-4 py-3 text-sm font-semibold text-ink">{r.passPercent}%</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+            {results.length > 0 ? (
+              <>
+                <p className="mb-4 text-sm text-ink/60">Board examination results — last three years.</p>
+                <div className="overflow-x-auto rounded-xl border border-ink/10">
+                  <table className="w-full min-w-[560px] border-collapse">
+                    <thead>
+                      <tr className="bg-cream text-left text-sm text-ink">
+                        <th className="border border-ink/10 px-4 py-3 font-semibold">Year</th>
+                        <th className="border border-ink/10 px-4 py-3 font-semibold">Class</th>
+                        <th className="border border-ink/10 px-4 py-3 font-semibold">No. Registered</th>
+                        <th className="border border-ink/10 px-4 py-3 font-semibold">No. Passed</th>
+                        <th className="border border-ink/10 px-4 py-3 font-semibold">Pass %</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {results.map((r) => (
+                        <tr key={r.id} className="hover:bg-cream-dark/50">
+                          <td className="border border-ink/10 px-4 py-3 text-sm text-ink/80">{r.year}</td>
+                          <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{r.classLevel}</td>
+                          <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{r.appeared}</td>
+                          <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{r.passed}</td>
+                          <td className="border border-ink/10 px-4 py-3 text-sm font-semibold text-ink">{r.passPercent}%</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            ) : (
+              <p className="rounded-xl border border-ink/10 bg-cream px-4 py-3 text-sm text-ink/70">
+                Oxford Grammar School was established in {c["school.estd"]}. The first batch of students is yet to appear for the CBSE board examinations, so board results will be published here in due course.
+              </p>
+            )}
             <p className="mt-4 text-xs text-ink/50">
               Fee structure, Annual Academic Calendar, and PTA details are available at the school office and on the notice board.
             </p>
