@@ -42,7 +42,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden bg-gradient-to-b from-amber-soft/50 via-cream to-white pt-[72px]">
         <div className="pointer-events-none absolute -right-40 -top-20 h-[520px] w-[520px] rounded-full bg-amber/25 blur-3xl" />
         <div className="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-coral/20 blur-3xl" />
-        <div className="container-x grid items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
+        <div className="container-x grid items-center gap-12 pb-14 pt-6 lg:grid-cols-[1.05fr_0.95fr] lg:pb-20 lg:pt-8">
           <div>
             <p className="eyebrow"><span className="h-1.5 w-1.5 rounded-full bg-gold" /> {c["hero.kicker"]}</p>
             <h1 className="mt-5 font-display text-[2.6rem] font-semibold leading-[1.02] tracking-tight text-ink sm:text-6xl">
