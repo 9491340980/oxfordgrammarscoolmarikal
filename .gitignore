@@ -38,8 +38,6 @@ next-env.d.ts
 # database & uploads
 /prisma/*.db
 /prisma/*.db-journal
-/public/uploads/*
-!/public/uploads/.gitkeep
 
 # static export & firebase
 /out/
