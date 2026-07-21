@@ -17,9 +17,9 @@ const PILLARS = [
 ];
 
 const JOURNEY = [
-  { no: "01", tint: "bg-coral text-white", name: "Primary Wing", grade: "Nursery – Grade 5", desc: "Play, phonics & wonder. Confident readers and joyful learners." },
-  { no: "02", tint: "bg-amber text-white", name: "Middle Wing", grade: "Grade 6 – 8", desc: "Concepts deepen across science, maths & languages, with bold projects." },
-  { no: "03", tint: "bg-leaf text-white", name: "Secondary Wing", grade: "Grade 9 – 10", desc: "Focused boards, career guidance & one-on-one mentoring." },
+  { no: "01", tint: "bg-coral text-white", name: "Pre-Primary", grade: "Nursery – UKG", desc: "Play, phonics and wonder — confident, joyful early learners." },
+  { no: "02", tint: "bg-amber text-white", name: "Primary", grade: "Grade 1 – 5", desc: "Strong foundations in reading, numeracy, science and languages." },
+  { no: "03", tint: "bg-leaf text-white", name: "Middle School", grade: "Grade 6 – 8", desc: "Deeper concepts with science, maths, computers and IIT foundation." },
 ];
 
 const STAT_TINTS = ["text-coral-light", "text-leaf-light", "text-amber", "text-gold-light"];
@@ -321,7 +321,7 @@ export default function HomePage() {
                   Let&apos;s build your child&apos;s future together.
                 </h2>
                 <p className="mt-5 max-w-md text-white/85">
-                  Limited seats, Nursery to Grade 10. Book a visit and meet the teachers who&apos;ll change their life.
+                  Limited seats, Nursery to Grade 8. Book a visit and meet the teachers who&apos;ll change their life.
                 </p>
               </div>
               <div className="rounded-3xl bg-white p-6 shadow-card">

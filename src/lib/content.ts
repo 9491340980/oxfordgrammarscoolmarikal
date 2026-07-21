@@ -148,9 +148,9 @@ export const CONTENT_DEFAULTS: Record<string, string> = {
   "disc.libraryBooks": "",
   "disc.internet": "",
 
-  "disc.totalTeachers": "",
-  "disc.pgt": "",
-  "disc.tgt": "",
-  "disc.prt": "",
+  "disc.totalTeachers": "21",
+  "disc.pgt": "6",
+  "disc.tgt": "6",
+  "disc.prt": "8",
   "disc.ratio": "",
 };

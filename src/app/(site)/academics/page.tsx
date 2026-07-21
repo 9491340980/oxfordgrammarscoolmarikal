@@ -8,22 +8,22 @@ import DocTitle from "@/components/DocTitle";
 
 const WINGS = [
   {
-    name: "Primary Wing",
-    grade: "Nursery – Grade 5",
+    name: "Pre-Primary",
+    grade: "Nursery – UKG",
     desc: "A play-based, activity-rich foundation where children fall in love with learning.",
-    points: ["Phonics & early literacy", "Hands-on numeracy", "Storytelling & art", "No-bag activity days"],
+    points: ["Phonics & early literacy", "Hands-on numeracy", "Rhymes, storytelling & art", "Caring, joyful classrooms"],
   },
   {
-    name: "Middle Wing",
+    name: "Primary",
+    grade: "Grade 1 – 5",
+    desc: "Strong foundations across languages, maths, science and social studies.",
+    points: ["Reading & writing skills", "Concept-based maths", "Activity-led science", "Computer basics"],
+  },
+  {
+    name: "Middle School",
     grade: "Grade 6 – 8",
-    desc: "Concepts deepen across science, maths and languages, anchored by bold projects.",
-    points: ["Lab-based science", "Coding & robotics", "Debate & public speaking", "Sports & clubs"],
-  },
-  {
-    name: "Secondary Wing",
-    grade: "Grade 9 – 10",
-    desc: "Focused board preparation with career guidance and one-on-one mentoring.",
-    points: ["CBSE board focus", "Career counselling", "Doubt-clearing labs", "Mentor for every student"],
+    desc: "Concepts deepen across science, maths and languages, with an IIT foundation.",
+    points: ["Lab-based science", "Maths & IIT foundation", "Computer education", "Sports & activities"],
   },
 ];
 

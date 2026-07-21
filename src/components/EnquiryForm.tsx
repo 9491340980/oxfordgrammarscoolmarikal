@@ -74,10 +74,9 @@ export default function EnquiryForm({
       <input name="email" type="email" placeholder="Email (optional)" className={inputClass} />
       <select name="grade" className={inputClass} defaultValue="">
         <option value="" disabled>Grade of interest</option>
-        <option>Nursery–KG</option>
+        <option>Nursery–UKG</option>
         <option>Grade 1–5</option>
         <option>Grade 6–8</option>
-        <option>Grade 9–10</option>
       </select>
       <textarea name="message" rows={3} placeholder="Anything you'd like to tell us? (optional)" className={`${inputClass} sm:col-span-2`} />
       <div className="sm:col-span-2">

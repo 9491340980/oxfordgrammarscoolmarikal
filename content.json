@@ -48,10 +48,10 @@
     "disc.labs": "",
     "disc.libraryBooks": "",
     "disc.internet": "",
-    "disc.totalTeachers": "",
-    "disc.pgt": "",
-    "disc.tgt": "",
-    "disc.prt": "",
+    "disc.totalTeachers": "21",
+    "disc.pgt": "6",
+    "disc.tgt": "6",
+    "disc.prt": "8",
     "disc.ratio": ""
   },
   "gallery": [
@@ -132,8 +132,8 @@
       "id": "cmqzhz235001q1ks3n0fq88h5",
       "title": "Admissions Open for 2026–27",
       "slug": "admissions-open-2026-27",
-      "excerpt": "Applications are now open for Nursery to Grade 10. Limited seats — book a campus visit today.",
-      "body": "We are delighted to announce that admissions for the academic year 2026–27 are now open across all grades from Nursery to Grade 10. Prospective parents are invited to book a guided campus visit and meet our faculty. Seats are limited and offered on a first-come basis subject to an interaction.",
+      "excerpt": "Applications are now open for Nursery to Grade 8. Limited seats — book a campus visit today.",
+      "body": "We are delighted to announce that admissions for the academic year 2026–27 are now open across all grades from Nursery to Grade 8. Prospective parents are invited to book a guided campus visit and meet our faculty. Seats are limited and offered on a first-come basis subject to an interaction.",
       "coverUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1000&q=80&auto=format&fit=crop",
       "category": "Announcement",
       "published": true,
@@ -146,7 +146,7 @@
       "name": "Suvarna Raju N",
       "designation": "Principal",
       "qualification": "M.A., B.Ed. · 16 years experience",
-      "subject": "Administration",
+      "subject": "English",
       "photoUrl": "/principal.jpeg",
       "sort": 0
     },
@@ -157,6 +157,166 @@
       "subject": "Mathematics",
       "photoUrl": "/Correspondent.jpeg",
       "sort": 1
+    },
+    {
+      "name": "K. Laxmikanth",
+      "designation": "PGT",
+      "qualification": "M.Sc., B.Ed.",
+      "subject": "Mathematics",
+      "photoUrl": null,
+      "sort": 2
+    },
+    {
+      "name": "V. Akhil Kumar",
+      "designation": "PGT",
+      "qualification": "M.Sc., B.Ed.",
+      "subject": "Maths & Computer",
+      "photoUrl": null,
+      "sort": 3
+    },
+    {
+      "name": "P. Shiva Prasad",
+      "designation": "TGT",
+      "qualification": "B.Tech, B.Ed.",
+      "subject": "Science & IIT",
+      "photoUrl": null,
+      "sort": 4
+    },
+    {
+      "name": "H. Anil Kumar",
+      "designation": "TGT",
+      "qualification": "B.Tech, B.Ed.",
+      "subject": "Maths & IIT",
+      "photoUrl": null,
+      "sort": 5
+    },
+    {
+      "name": "E. Rajeshwari",
+      "designation": "PGT",
+      "qualification": "M.A., B.Ed.",
+      "subject": "Telugu",
+      "photoUrl": null,
+      "sort": 6
+    },
+    {
+      "name": "Christina",
+      "designation": "TGT",
+      "qualification": "B.A.",
+      "subject": "English",
+      "photoUrl": null,
+      "sort": 7
+    },
+    {
+      "name": "Tsurila Yim",
+      "designation": "TGT",
+      "qualification": "B.A., B.Ed.",
+      "subject": "English & EVS",
+      "photoUrl": null,
+      "sort": 8
+    },
+    {
+      "name": "G. Swathi",
+      "designation": "Pre-Primary Teacher",
+      "qualification": "B.Sc., B.Ed. & D.Ed.",
+      "subject": "Mathematics",
+      "photoUrl": null,
+      "sort": 9
+    },
+    {
+      "name": "Santhoshi Dharai",
+      "designation": "TGT",
+      "qualification": "B.Sc., B.Ed.",
+      "subject": "Hindi",
+      "photoUrl": null,
+      "sort": 10
+    },
+    {
+      "name": "Anima Tete",
+      "designation": "TGT",
+      "qualification": "B.A.",
+      "subject": "Hindi & EVS",
+      "photoUrl": null,
+      "sort": 11
+    },
+    {
+      "name": "Amulya",
+      "designation": "PGT",
+      "qualification": "M.Sc., B.Ed.",
+      "subject": "Telugu",
+      "photoUrl": null,
+      "sort": 12
+    },
+    {
+      "name": "B. Uppalaiah",
+      "designation": "PGT",
+      "qualification": "M.A., B.Ed.",
+      "subject": "Social",
+      "photoUrl": null,
+      "sort": 13
+    },
+    {
+      "name": "G. Raghavendra",
+      "designation": "PGT",
+      "qualification": "M.Sc., B.Ed.",
+      "subject": "Chemistry & Biology",
+      "photoUrl": null,
+      "sort": 14
+    },
+    {
+      "name": "Chikumla",
+      "designation": "Pre-Primary Teacher",
+      "qualification": "B.A.",
+      "subject": "Rhymes",
+      "photoUrl": null,
+      "sort": 15
+    },
+    {
+      "name": "Shikha Nayak",
+      "designation": "Pre-Primary Teacher",
+      "qualification": "B.A.",
+      "subject": "Hindi & English",
+      "photoUrl": null,
+      "sort": 16
+    },
+    {
+      "name": "Madhusmita",
+      "designation": "Pre-Primary Teacher",
+      "qualification": "B.A.",
+      "subject": "Hindi & EVS",
+      "photoUrl": null,
+      "sort": 17
+    },
+    {
+      "name": "G. Rajeshwari",
+      "designation": "Pre-Primary Teacher",
+      "qualification": "B.Sc.",
+      "subject": "Mathematics",
+      "photoUrl": null,
+      "sort": 18
+    },
+    {
+      "name": "V. Sunitha",
+      "designation": "Pre-Primary Teacher",
+      "qualification": "Intermediate",
+      "subject": "Maths & Computer",
+      "photoUrl": null,
+      "sort": 19
+    },
+    {
+      "name": "Jyothirmai",
+      "designation": "Pre-Primary Teacher",
+      "qualification": "B.Sc., B.Ed.",
+      "subject": "Maths & English",
+      "photoUrl": null,
+      "sort": 20
+    },
+    {
+      "name": "Maheshwari",
+      "designation": "Pre-Primary Teacher",
+      "qualification": "B.Sc.",
+      "subject": "Mathematics",
+      "photoUrl": null,
+      "sort": 21
     }
   ],
   "disclosureDocs": [
