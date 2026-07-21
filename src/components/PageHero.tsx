@@ -17,10 +17,9 @@ export default function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden bg-cream pt-[72px]">
-      {/* soft, warm colour wash instead of a heavy dark block */}
-      <div className="pointer-events-none absolute -right-32 -top-24 h-96 w-96 rounded-full bg-amber/40 blur-3xl" />
-      <div className="pointer-events-none absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-coral/25 blur-3xl" />
-      <div className="pointer-events-none absolute right-1/4 top-1/2 h-56 w-56 rounded-full bg-leaf/25 blur-3xl" />
+      {/* subtle warm wash — kept gentle and cohesive */}
+      <div className="pointer-events-none absolute -right-40 -top-32 h-96 w-96 rounded-full bg-amber/20 blur-3xl" />
+      <div className="pointer-events-none absolute -left-40 -bottom-24 h-80 w-80 rounded-full bg-coral/15 blur-3xl" />
 
       <div
         className={`container-x relative gap-10 py-10 sm:py-14 ${
@@ -45,16 +44,12 @@ export default function PageHero({
 
         {image && (
           <div className="relative">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-card">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] shadow-card ring-4 ring-white">
               <Image src={image} alt={title} fill className="object-cover" sizes="(max-width:1024px) 100vw, 45vw" priority />
             </div>
-            <span className="absolute -bottom-3 -left-3 h-16 w-16 rounded-2xl bg-amber/30 blur-xl" />
           </div>
         )}
       </div>
-
-      {/* gentle transition into the white page below */}
-      <div className="h-8 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

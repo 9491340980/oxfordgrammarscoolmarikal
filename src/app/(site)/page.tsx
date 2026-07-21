@@ -39,10 +39,9 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-amber-soft/60 via-cream to-white pt-[72px]">
-        <div className="pointer-events-none absolute -right-40 -top-20 h-[520px] w-[520px] rounded-full bg-amber/40 blur-3xl" />
-        <div className="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-coral/30 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-10 right-1/3 h-[300px] w-[300px] rounded-full bg-leaf/25 blur-3xl" />
+      <section className="relative overflow-hidden bg-gradient-to-b from-amber-soft/50 via-cream to-white pt-[72px]">
+        <div className="pointer-events-none absolute -right-40 -top-20 h-[520px] w-[520px] rounded-full bg-amber/25 blur-3xl" />
+        <div className="pointer-events-none absolute -left-32 top-40 h-[380px] w-[380px] rounded-full bg-coral/20 blur-3xl" />
         <div className="container-x grid items-center gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:py-24">
           <div>
             <p className="eyebrow"><span className="h-1.5 w-1.5 rounded-full bg-gold" /> {c["hero.kicker"]}</p>
