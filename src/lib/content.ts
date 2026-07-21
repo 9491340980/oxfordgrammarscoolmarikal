@@ -85,7 +85,21 @@ export const CONTENT_FIELDS: FieldDef[] = [
   { key: "disc.pgt", label: "PGT", type: "text", group: "CBSE: Staff" },
   { key: "disc.tgt", label: "TGT", type: "text", group: "CBSE: Staff" },
   { key: "disc.prt", label: "PRT", type: "text", group: "CBSE: Staff" },
+  { key: "disc.pet", label: "PET (Physical Education Teacher)", type: "text", group: "CBSE: Staff" },
+  { key: "disc.specialEducator", label: "Special Educator (details)", type: "text", group: "CBSE: Staff" },
+  { key: "disc.counsellor", label: "Counsellor / Wellness Teacher (details)", type: "text", group: "CBSE: Staff" },
   { key: "disc.ratio", label: "Teacher–student ratio", type: "text", group: "CBSE: Staff" },
+
+  // CBSE — Infrastructure (extras)
+  { key: "disc.girlsToilets", label: "No. of Girls toilets", type: "text", group: "CBSE: Infrastructure" },
+  { key: "disc.boysToilets", label: "No. of Boys toilets", type: "text", group: "CBSE: Infrastructure" },
+  { key: "disc.inspectionVideo", label: "YouTube video of school inspection (URL)", type: "text", group: "CBSE: Infrastructure" },
+
+  // CBSE — Academic documents (link/PDF URLs)
+  { key: "disc.feeStructureUrl", label: "Fee structure (PDF URL)", type: "text", group: "CBSE: Academic documents", hint: "Leave blank to show 'Available at school office'." },
+  { key: "disc.academicCalendarUrl", label: "Annual Academic Calendar (PDF URL)", type: "text", group: "CBSE: Academic documents" },
+  { key: "disc.smcUrl", label: "School Management Committee list (PDF URL)", type: "text", group: "CBSE: Academic documents" },
+  { key: "disc.ptaUrl", label: "PTA members list (PDF URL)", type: "text", group: "CBSE: Academic documents" },
 ];
 
 export const CONTENT_DEFAULTS: Record<string, string> = {
@@ -152,5 +166,15 @@ export const CONTENT_DEFAULTS: Record<string, string> = {
   "disc.pgt": "6",
   "disc.tgt": "6",
   "disc.prt": "8",
+  "disc.pet": "",
+  "disc.specialEducator": "",
+  "disc.counsellor": "",
   "disc.ratio": "",
+  "disc.girlsToilets": "",
+  "disc.boysToilets": "",
+  "disc.inspectionVideo": "",
+  "disc.feeStructureUrl": "/fee-structure-2026-27.pdf",
+  "disc.academicCalendarUrl": "",
+  "disc.smcUrl": "",
+  "disc.ptaUrl": "",
 };

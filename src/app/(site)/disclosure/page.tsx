@@ -13,6 +13,21 @@ function Row({ label, value }: { label: string; value?: string }) {
   );
 }
 
+function LinkRow({ label, url }: { label: string; url?: string }) {
+  return (
+    <tr className="hover:bg-cream-dark/50">
+      <td className="w-1/2 border border-ink/10 px-4 py-3 text-sm font-medium text-ink/80">{label}</td>
+      <td className="border border-ink/10 px-4 py-3 text-sm">
+        {url ? (
+          <a href={url} target="_blank" rel="noopener" className="font-medium text-gold underline">View / Download ↗</a>
+        ) : (
+          <span className="text-ink/50">Available at the school office</span>
+        )}
+      </td>
+    </tr>
+  );
+}
+
 function SectionTitle({ letter, title }: { letter: string; title: string }) {
   return (
     <div className="mb-5 flex items-center gap-3">
@@ -125,9 +140,16 @@ export default function DisclosurePage() {
                 Oxford Grammar School was established in {c["school.estd"]}. The first batch of students is yet to appear for the CBSE board examinations, so board results will be published here in due course.
               </p>
             )}
-            <p className="mt-4 text-xs text-ink/50">
-              Fee structure, Annual Academic Calendar, and PTA details are available at the school office and on the notice board.
-            </p>
+            <div className="mt-6 overflow-x-auto rounded-xl border border-ink/10">
+              <table className="w-full border-collapse">
+                <tbody>
+                  <LinkRow label="Fee Structure of the School" url={c["disc.feeStructureUrl"]} />
+                  <LinkRow label="Annual Academic Calendar" url={c["disc.academicCalendarUrl"]} />
+                  <LinkRow label="List of School Management Committee (SMC)" url={c["disc.smcUrl"]} />
+                  <LinkRow label="List of Parents-Teachers Association (PTA) Members" url={c["disc.ptaUrl"]} />
+                </tbody>
+              </table>
+            </div>
           </div>
 
           {/* D — Staff */}
@@ -138,9 +160,12 @@ export default function DisclosurePage() {
                 <tbody>
                   <Row label="Principal" value="1" />
                   <Row label="Total No. of Teachers" value={c["disc.totalTeachers"]} />
-                  <Row label="PGT" value={c["disc.pgt"]} />
-                  <Row label="TGT" value={c["disc.tgt"]} />
-                  <Row label="PRT" value={c["disc.prt"]} />
+                  <Row label="PGT (Post Graduate Teachers)" value={c["disc.pgt"]} />
+                  <Row label="TGT (Trained Graduate Teachers)" value={c["disc.tgt"]} />
+                  <Row label="PRT (Primary Teachers)" value={c["disc.prt"]} />
+                  <Row label="PET (Physical Education Teacher)" value={c["disc.pet"]} />
+                  <Row label="Special Educator" value={c["disc.specialEducator"]} />
+                  <Row label="Counsellor & Wellness Teacher" value={c["disc.counsellor"]} />
                   <Row label="Teacher–Student Ratio" value={c["disc.ratio"]} />
                 </tbody>
               </table>
@@ -156,10 +181,13 @@ export default function DisclosurePage() {
                   <Row label="Total Campus Area of the School (sq. mtr.)" value={c["disc.totalArea"]} />
                   <Row label="Built-up Area (sq. mtr.)" value={c["disc.builtArea"]} />
                   <Row label="Area of Playground (sq. mtr.)" value={c["disc.playground"]} />
-                  <Row label="Number of Classrooms" value={c["disc.classrooms"]} />
-                  <Row label="Number of Laboratories" value={c["disc.labs"]} />
+                  <Row label="No. and size of Classrooms" value={c["disc.classrooms"]} />
+                  <Row label="No. and size of Laboratories (incl. Computer Labs)" value={c["disc.labs"]} />
                   <Row label="Number of Books in Library" value={c["disc.libraryBooks"]} />
-                  <Row label="Internet Facility" value={c["disc.internet"]} />
+                  <Row label="Internet Facility (Y/N)" value={c["disc.internet"]} />
+                  <Row label="No. of Girls Toilets" value={c["disc.girlsToilets"]} />
+                  <Row label="No. of Boys Toilets" value={c["disc.boysToilets"]} />
+                  <LinkRow label="Link of YouTube Video of School Inspection" url={c["disc.inspectionVideo"]} />
                 </tbody>
               </table>
             </div>
