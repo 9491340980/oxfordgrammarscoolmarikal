@@ -42,14 +42,14 @@ export default function SiteHeader({ subtitle = "CBSE · Marikal" }: { subtitle?
     >
       <div className="container-x flex h-[72px] items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
-          <span className="grid h-12 w-12 place-items-center overflow-hidden rounded-full bg-white ring-1 ring-ink/10">
-            <Image src="/logo.png" alt={schoolName} width={48} height={48} className="h-full w-full object-contain" priority />
+          <span className="grid h-12 w-12 shrink-0 place-items-center overflow-hidden rounded-full bg-white shadow-sm ring-1 ring-ink/10 sm:h-16 sm:w-16">
+            <Image src="/logo.png" alt={schoolName} width={64} height={64} className="h-full w-full object-contain" priority />
           </span>
           <span className="leading-tight">
-            <span className="block font-display text-base font-semibold leading-tight text-ink sm:text-lg">
+            <span className="block font-display text-lg font-bold leading-tight tracking-tight text-ink sm:text-2xl">
               {schoolName}
             </span>
-            <span className="block text-[10px] font-semibold uppercase tracking-[0.28em] text-gold">{subtitle}</span>
+            <span className="block text-[10px] font-bold uppercase tracking-[0.3em] text-gold sm:text-xs">{subtitle}</span>
           </span>
         </Link>
 
