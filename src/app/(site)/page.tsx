@@ -76,10 +76,10 @@ export default function HomePage() {
               <Image src={c["hero.image"]} alt="Students at Oxford Grammar School" fill className="object-cover" priority sizes="(max-width:1024px) 100vw, 50vw" />
             </div>
             <div className="absolute -left-4 bottom-10 flex items-center gap-3 rounded-2xl bg-white/95 px-4 py-3 shadow-card backdrop-blur">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-leaf-soft text-lg">🏆</span>
+              <span className="grid h-10 w-10 place-items-center rounded-xl bg-leaf-soft text-lg">🎓</span>
               <div>
-                <div className="text-sm font-bold text-ink">{c["stats.s3.value"]} Board Results</div>
-                <div className="text-xs text-ink/50">Class X · {results[0]?.year ?? "2024-25"}</div>
+                <div className="text-sm font-bold text-ink">CBSE Affiliated</div>
+                <div className="text-xs text-ink/50">Established {c["school.estd"]}</div>
               </div>
             </div>
             <div className="absolute -right-3 top-8 rotate-3 rounded-full bg-coral px-4 py-2 text-xs font-bold text-white shadow-card">
@@ -222,7 +222,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* RESULTS — vibrant success band */}
+      {/* RESULTS — vibrant success band (hidden until the first batch has results) */}
+      {results.length > 0 && (
       <section className="relative overflow-hidden bg-gradient-to-br from-[#0f8a45] via-leaf to-[#0c6f39] py-20 text-white sm:py-28">
         <div className="pointer-events-none absolute -right-24 -top-16 h-80 w-80 rounded-full bg-leaf-light/25 blur-3xl" />
         <div className="pointer-events-none absolute -bottom-20 left-10 h-72 w-72 rounded-full bg-amber/20 blur-3xl" />
@@ -256,6 +257,7 @@ export default function HomePage() {
           </Reveal>
         </div>
       </section>
+      )}
 
       {/* PRINCIPAL */}
       <section className="section bg-white">

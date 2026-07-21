@@ -92,11 +92,12 @@ export default function AcademicsPage() {
       </section>
 
       {/* Board Results */}
+      {results.length > 0 && (
       <section className="section bg-white">
         <div className="container-x">
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Board Results</p>
-            <h2 className="display-h2 mt-3">Three years of excellence.</h2>
+            <h2 className="display-h2 mt-3">Our board results.</h2>
           </Reveal>
           <div className="mt-10 overflow-x-auto rounded-2xl border border-ink/10 bg-white shadow-soft">
             <table className="w-full min-w-[640px] text-left text-sm">
@@ -126,6 +127,7 @@ export default function AcademicsPage() {
           </div>
         </div>
       </section>
+      )}
 
       <section className="section bg-cream">
         <div className="container-x text-center">
