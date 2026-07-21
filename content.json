@@ -35,7 +35,7 @@
     "disc.affiliationNo": "",
     "disc.schoolCode": "",
     "disc.affiliationValid": "",
-    "disc.trustName": "",
+    "disc.trustName": "Marikal Educational Society",
     "disc.principalName": "Suvarna Raju N",
     "disc.principalQual": "M.A., B.Ed.",
     "disc.email": "oxfordgrammarschoolcbsemarikal@gmail.com",
@@ -154,7 +154,7 @@
       "name": "D. Ramulu",
       "designation": "Correspondent",
       "qualification": "M.A.",
-      "subject": "Mathematics",
+      "subject": "",
       "photoUrl": "/Correspondent.jpeg",
       "sort": 1
     },
