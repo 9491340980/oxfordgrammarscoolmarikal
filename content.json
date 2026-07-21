@@ -143,19 +143,19 @@
   "results": [],
   "faculty": [
     {
-      "name": "Suvarna Raju N",
-      "designation": "Principal",
-      "qualification": "M.A., B.Ed. · 16 years experience",
-      "subject": "English",
-      "photoUrl": "/principal.jpeg",
-      "sort": 0
-    },
-    {
       "name": "D. Ramulu",
       "designation": "Correspondent",
       "qualification": "M.A.",
       "subject": "",
       "photoUrl": "/Correspondent.jpeg",
+      "sort": 0
+    },
+    {
+      "name": "Suvarna Raju N",
+      "designation": "Principal",
+      "qualification": "M.A., B.Ed. · 16 years experience",
+      "subject": "English",
+      "photoUrl": "/principal.jpeg",
       "sort": 1
     },
     {
