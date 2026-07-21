@@ -6,22 +6,24 @@ import DocTitle from "@/components/DocTitle";
 
 function Row({ label, value }: { label: string; value?: string }) {
   return (
-    <tr className="hover:bg-cream-dark/50">
-      <td className="w-1/2 border border-ink/10 px-4 py-3 text-sm font-medium text-ink/80">{label}</td>
-      <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{value || "—"}</td>
+    <tr className="border-b border-ink/10 last:border-0 even:bg-[#f7f4ec]">
+      <td className="w-[45%] px-4 py-3 align-top text-sm font-semibold text-ink">{label}</td>
+      <td className="border-l border-ink/10 px-4 py-3 align-top text-sm text-ink/90">{value || "—"}</td>
     </tr>
   );
 }
 
 function LinkRow({ label, url }: { label: string; url?: string }) {
   return (
-    <tr className="hover:bg-cream-dark/50">
-      <td className="w-1/2 border border-ink/10 px-4 py-3 text-sm font-medium text-ink/80">{label}</td>
-      <td className="border border-ink/10 px-4 py-3 text-sm">
+    <tr className="border-b border-ink/10 last:border-0 even:bg-[#f7f4ec]">
+      <td className="w-[45%] px-4 py-3 align-top text-sm font-semibold text-ink">{label}</td>
+      <td className="border-l border-ink/10 px-4 py-3 align-top text-sm">
         {url ? (
-          <a href={url} target="_blank" rel="noopener" className="font-medium text-gold underline">View / Download ↗</a>
+          <a href={url} target="_blank" rel="noopener" className="inline-flex items-center gap-1 font-bold text-coral underline decoration-2 underline-offset-2">
+            Click here – View ↗
+          </a>
         ) : (
-          <span className="text-ink/50">Available at the school office</span>
+          <span className="text-ink/60">Available at the school office</span>
         )}
       </td>
     </tr>
@@ -30,12 +32,15 @@ function LinkRow({ label, url }: { label: string; url?: string }) {
 
 function SectionTitle({ letter, title }: { letter: string; title: string }) {
   return (
-    <div className="mb-5 flex items-center gap-3">
-      <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-ink text-sm font-bold text-gold-light">{letter}</span>
-      <h2 className="font-display text-2xl font-semibold text-ink">{title}</h2>
+    <div className="mb-4 flex items-center gap-3 rounded-xl border-l-4 border-gold bg-cream px-4 py-3 shadow-soft">
+      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-md bg-ink text-sm font-bold text-gold-light">{letter}</span>
+      <h2 className="font-display text-lg font-bold uppercase tracking-wide text-ink sm:text-xl">{title}</h2>
     </div>
   );
 }
+
+const tableWrap = "overflow-x-auto rounded-xl border border-ink/10 bg-white shadow-soft";
+const thBase = "border-r border-white/15 px-4 py-3 font-semibold last:border-0";
 
 export default function DisclosurePage() {
   const { content: c, disclosureDocs: docs, results } = useSite();
@@ -49,12 +54,12 @@ export default function DisclosurePage() {
         subtitle="Published in compliance with the CBSE Affiliation Bylaws. Updated by the school administration."
       />
 
-      <section className="section bg-cream">
-        <div className="container-x max-w-5xl space-y-16">
+      <section className="section bg-white">
+        <div className="container-x max-w-5xl space-y-12">
           {/* A — General Information */}
           <div>
             <SectionTitle letter="A" title="General Information" />
-            <div className="overflow-x-auto rounded-xl border border-ink/10">
+            <div className={tableWrap}>
               <table className="w-full border-collapse">
                 <tbody>
                   <Row label="Name of the School" value={c["school.name"]} />
@@ -74,27 +79,27 @@ export default function DisclosurePage() {
           {/* B — Documents and Information */}
           <div>
             <SectionTitle letter="B" title="Documents and Information" />
-            <div className="overflow-x-auto rounded-xl border border-ink/10">
+            <div className={tableWrap}>
               <table className="w-full min-w-[560px] border-collapse">
                 <thead>
-                  <tr className="bg-cream text-left text-sm text-ink">
-                    <th className="border border-ink/10 px-4 py-3 font-semibold">S. No.</th>
-                    <th className="border border-ink/10 px-4 py-3 font-semibold">Document / Information</th>
-                    <th className="border border-ink/10 px-4 py-3 font-semibold">Status</th>
+                  <tr className="bg-ink-950 text-left text-sm text-white">
+                    <th className={`${thBase} w-16`}>S. No.</th>
+                    <th className={thBase}>Document / Information</th>
+                    <th className={`${thBase} w-56`}>Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   {docs.map((d, i) => (
-                    <tr key={i} className="hover:bg-cream-dark/50">
-                      <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{i + 1}</td>
-                      <td className="border border-ink/10 px-4 py-3 text-sm text-ink/80">{d.label}</td>
-                      <td className="border border-ink/10 px-4 py-3 text-sm">
+                    <tr key={i} className="border-b border-ink/10 last:border-0 even:bg-[#f7f4ec]">
+                      <td className="border-r border-ink/10 px-4 py-3 text-sm font-semibold text-ink">{i + 1}</td>
+                      <td className="border-r border-ink/10 px-4 py-3 text-sm text-ink/90">{d.label}</td>
+                      <td className="px-4 py-3 text-sm">
                         {d.fileUrl ? (
-                          <a href={d.fileUrl} target="_blank" rel="noopener" className="font-medium text-gold underline">
-                            View document ↗
+                          <a href={d.fileUrl} target="_blank" rel="noopener" className="font-bold text-coral underline decoration-2 underline-offset-2">
+                            Click here – View ↗
                           </a>
                         ) : (
-                          <span className="text-ink/50">{d.note || "Available on request"}</span>
+                          <span className="text-ink/60">{d.note || "Available on request"}</span>
                         )}
                       </td>
                     </tr>
@@ -109,26 +114,26 @@ export default function DisclosurePage() {
             <SectionTitle letter="C" title="Result and Academics" />
             {results.length > 0 ? (
               <>
-                <p className="mb-4 text-sm text-ink/60">Board examination results — last three years.</p>
-                <div className="overflow-x-auto rounded-xl border border-ink/10">
+                <p className="mb-4 text-sm text-ink/70">Board examination results — last three years.</p>
+                <div className={tableWrap}>
                   <table className="w-full min-w-[560px] border-collapse">
                     <thead>
-                      <tr className="bg-cream text-left text-sm text-ink">
-                        <th className="border border-ink/10 px-4 py-3 font-semibold">Year</th>
-                        <th className="border border-ink/10 px-4 py-3 font-semibold">Class</th>
-                        <th className="border border-ink/10 px-4 py-3 font-semibold">No. Registered</th>
-                        <th className="border border-ink/10 px-4 py-3 font-semibold">No. Passed</th>
-                        <th className="border border-ink/10 px-4 py-3 font-semibold">Pass %</th>
+                      <tr className="bg-ink-950 text-left text-sm text-white">
+                        <th className={thBase}>Year</th>
+                        <th className={thBase}>Class</th>
+                        <th className={thBase}>No. Registered</th>
+                        <th className={thBase}>No. Passed</th>
+                        <th className={thBase}>Pass %</th>
                       </tr>
                     </thead>
                     <tbody>
                       {results.map((r) => (
-                        <tr key={r.id} className="hover:bg-cream-dark/50">
-                          <td className="border border-ink/10 px-4 py-3 text-sm text-ink/80">{r.year}</td>
-                          <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{r.classLevel}</td>
-                          <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{r.appeared}</td>
-                          <td className="border border-ink/10 px-4 py-3 text-sm text-ink/70">{r.passed}</td>
-                          <td className="border border-ink/10 px-4 py-3 text-sm font-semibold text-ink">{r.passPercent}%</td>
+                        <tr key={r.id} className="border-b border-ink/10 last:border-0 even:bg-[#f7f4ec]">
+                          <td className="border-r border-ink/10 px-4 py-3 text-sm font-semibold text-ink">{r.year}</td>
+                          <td className="border-r border-ink/10 px-4 py-3 text-sm text-ink/90">{r.classLevel}</td>
+                          <td className="border-r border-ink/10 px-4 py-3 text-sm text-ink/90">{r.appeared}</td>
+                          <td className="border-r border-ink/10 px-4 py-3 text-sm text-ink/90">{r.passed}</td>
+                          <td className="px-4 py-3 text-sm font-bold text-leaf">{r.passPercent}%</td>
                         </tr>
                       ))}
                     </tbody>
@@ -136,11 +141,11 @@ export default function DisclosurePage() {
                 </div>
               </>
             ) : (
-              <p className="rounded-xl border border-ink/10 bg-cream px-4 py-3 text-sm text-ink/70">
+              <p className="rounded-xl border border-gold/30 bg-gold-soft/50 px-4 py-3 text-sm text-ink/80">
                 Oxford Grammar School was established in {c["school.estd"]}. The first batch of students is yet to appear for the CBSE board examinations, so board results will be published here in due course.
               </p>
             )}
-            <div className="mt-6 overflow-x-auto rounded-xl border border-ink/10">
+            <div className={`mt-6 ${tableWrap}`}>
               <table className="w-full border-collapse">
                 <tbody>
                   <LinkRow label="Fee Structure of the School" url={c["disc.feeStructureUrl"]} />
@@ -155,7 +160,7 @@ export default function DisclosurePage() {
           {/* D — Staff */}
           <div>
             <SectionTitle letter="D" title="Staff (Teaching)" />
-            <div className="overflow-x-auto rounded-xl border border-ink/10">
+            <div className={tableWrap}>
               <table className="w-full border-collapse">
                 <tbody>
                   <Row label="Principal" value="1" />
@@ -175,7 +180,7 @@ export default function DisclosurePage() {
           {/* E — Infrastructure */}
           <div>
             <SectionTitle letter="E" title="School Infrastructure" />
-            <div className="overflow-x-auto rounded-xl border border-ink/10">
+            <div className={tableWrap}>
               <table className="w-full border-collapse">
                 <tbody>
                   <Row label="Total Campus Area of the School (sq. mtr.)" value={c["disc.totalArea"]} />
@@ -193,7 +198,7 @@ export default function DisclosurePage() {
             </div>
           </div>
 
-          <p className="rounded-xl border border-gold/30 bg-gold-soft/40 p-4 text-xs text-ink/60">
+          <p className="rounded-xl border border-gold/30 bg-gold-soft/50 p-4 text-xs text-ink/70">
             This disclosure is maintained as per the CBSE Affiliation Bylaws. For any clarification or to obtain
             certified copies of the listed documents, please contact the school office at {c["disc.phone"]} or {c["disc.email"]}.
           </p>
