@@ -22,6 +22,15 @@ const JOURNEY = [
   { no: "03", tint: "bg-leaf text-white", name: "Middle School", grade: "Grade 6 – 8", desc: "Deeper concepts with science, maths, computers and IIT foundation." },
 ];
 
+const HIGHLIGHTS = [
+  { icon: "🔬", label: "Science Labs", grad: "from-leaf-soft" },
+  { icon: "💻", label: "Computer Lab", grad: "from-sky" },
+  { icon: "📚", label: "Library", grad: "from-amber-soft" },
+  { icon: "🎯", label: "IIT Foundation", grad: "from-coral-soft" },
+  { icon: "🖥️", label: "Smart Classrooms", grad: "from-mint" },
+  { icon: "🛡️", label: "Safe Campus", grad: "from-gold-soft" },
+];
+
 const STAT_META = [
   { tint: "text-coral-light", icon: "🎓", ring: "bg-coral/20" },
   { tint: "text-leaf-light", icon: "📘", ring: "bg-leaf/20" },
@@ -118,11 +127,27 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* HIGHLIGHTS STRIP */}
+      <section className="bg-white pt-12 sm:pt-16">
+        <div className="container-x">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+            {HIGHLIGHTS.map((h, i) => (
+              <Reveal key={h.label} delay={(i % 6) * 0.05}>
+                <div className={`flex h-full flex-col items-center gap-2 rounded-2xl border border-ink/10 bg-gradient-to-br ${h.grad} to-white p-4 text-center shadow-soft transition duration-300 hover:-translate-y-1.5 hover:shadow-card`}>
+                  <span className="text-3xl transition group-hover:scale-110">{h.icon}</span>
+                  <span className="text-sm font-bold text-ink">{h.label}</span>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* BELIEF / ABOUT */}
       <section className="section bg-white">
         <div className="container-x grid gap-14 lg:grid-cols-2 lg:items-center">
           <Reveal>
-            <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] shadow-soft">
+            <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] shadow-card ring-1 ring-ink/5">
               <Image src={c["about.image"]} alt="A class at Oxford Grammar School" fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
             </div>
           </Reveal>
@@ -211,24 +236,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CAMPUS GALLERY */}
+      {/* CAMPUS & FACILITIES SHOWCASE */}
       <section className="section bg-white">
         <div className="container-x">
           <Reveal className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="eyebrow">Campus Life</p>
-              <h2 className="display-h2 mt-3">Twelve acres to explore.</h2>
+            <div className="max-w-xl">
+              <p className="eyebrow">Our Campus</p>
+              <h2 className="display-h2 mt-3">A campus made for learning.</h2>
+              <p className="mt-4 text-ink/60">Modern science, maths and computer labs, a growing library and smart classrooms — a place designed to make learning come alive.</p>
             </div>
-            <Link href="/gallery" className="btn-outline">Full Gallery →</Link>
+            <Link href="/gallery" className="btn-gold">View Full Gallery →</Link>
           </Reveal>
-          <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3">
-            {gallery.map((g, i) => (
-              <Reveal key={g.id} delay={(i % 3) * 0.06} className={i === 0 ? "col-span-2 row-span-2 md:col-span-1 md:row-span-2" : ""}>
-                <figure className="group relative h-full min-h-[180px] overflow-hidden rounded-2xl">
-                  <Image src={g.url} alt={g.title} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width:768px) 50vw, 33vw" />
-                  <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink-950/80 to-transparent p-4">
-                    <span className="text-xs font-semibold uppercase tracking-wide text-gold-light">{g.category}</span>
-                    <p className="text-sm font-semibold text-cream">{g.title}</p>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {gallery.slice(0, 4).map((g, i) => (
+              <Reveal key={g.id} delay={(i % 4) * 0.07}>
+                <figure className="group relative aspect-[3/4] overflow-hidden rounded-3xl shadow-soft ring-1 ring-ink/5 transition duration-300 hover:shadow-card">
+                  <Image src={g.url} alt={g.title} fill className="object-cover transition duration-700 group-hover:scale-110" sizes="(max-width:768px) 50vw, 25vw" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/15 to-transparent" />
+                  <figcaption className="absolute inset-x-0 bottom-0 p-4">
+                    <span className="chip bg-white/20 text-white backdrop-blur-sm">{g.category}</span>
+                    <p className="mt-2 text-lg font-bold text-white">{g.title}</p>
                   </figcaption>
                 </figure>
               </Reveal>
@@ -276,20 +303,30 @@ export default function HomePage() {
 
       {/* PRINCIPAL */}
       <section className="section bg-white">
-        <div className="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
-          <Reveal>
-            <div className="relative mx-auto aspect-square w-64 overflow-hidden rounded-[2rem] shadow-soft lg:w-full">
-              <Image src={c["principal.photo"]} alt={c["principal.name"]} fill className="object-cover" sizes="320px" />
+        <div className="container-x">
+          <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-cream via-white to-mint p-6 shadow-soft ring-1 ring-ink/5 sm:p-12">
+            <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 animate-blob rounded-full bg-amber/20 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-16 -left-16 h-56 w-56 animate-blob rounded-full bg-leaf/15 blur-3xl" style={{ animationDelay: "5s" }} />
+            <div className="relative grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-center">
+              <Reveal>
+                <div className="relative mx-auto aspect-square w-56 overflow-hidden rounded-[2rem] shadow-card ring-4 ring-white lg:w-full">
+                  <Image src={c["principal.photo"]} alt={c["principal.name"]} fill className="object-cover" sizes="320px" />
+                </div>
+              </Reveal>
+              <Reveal delay={0.1}>
+                <p className="eyebrow">Principal&apos;s Message</p>
+                <span className="mt-2 block font-display text-6xl leading-none text-gold">“</span>
+                <p className="-mt-4 font-display text-2xl leading-snug text-ink sm:text-3xl">{c["principal.message"]}</p>
+                <div className="mt-6 flex items-center gap-3">
+                  <span className="h-10 w-1 rounded-full bg-gradient-to-b from-gold to-coral" />
+                  <div>
+                    <div className="font-bold text-ink">{c["principal.name"]}</div>
+                    <div className="text-sm text-ink/50">Principal, {c["school.name"]}</div>
+                  </div>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <span className="text-5xl font-display text-gold">“</span>
-            <p className="font-display text-2xl leading-snug text-ink sm:text-3xl">{c["principal.message"]}</p>
-            <div className="mt-6">
-              <div className="font-semibold text-ink">{c["principal.name"]}</div>
-              <div className="text-sm text-ink/50">Principal, {c["school.name"]}</div>
-            </div>
-          </Reveal>
+          </div>
         </div>
       </section>
 
