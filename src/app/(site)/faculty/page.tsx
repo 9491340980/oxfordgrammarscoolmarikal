@@ -68,7 +68,7 @@ export default function FacultyPage() {
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {teachers.map((f, i) => (
               <Reveal key={f.name} delay={(i % 3) * 0.05}>
-                <div className="card flex h-full items-center gap-4 p-5">
+                <div className="card flex h-full items-center gap-4 p-5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card">
                   <span className={`grid h-12 w-12 shrink-0 place-items-center rounded-full text-sm font-bold ${TINTS[i % TINTS.length]}`}>
                     {initials(f.name)}
                   </span>

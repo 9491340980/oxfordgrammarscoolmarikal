@@ -53,13 +53,13 @@ export default function AboutPage() {
       {/* Vision / Mission */}
       <section className="section bg-cream">
         <div className="container-x grid gap-8 md:grid-cols-2">
-          <Reveal className="rounded-3xl border border-gold/25 bg-gold-soft/30 p-8">
+          <Reveal className="rounded-3xl border border-gold/25 bg-gold-soft/30 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
             <p className="eyebrow">Our Vision</p>
             <p className="mt-4 font-display text-2xl leading-snug text-ink">
               To raise confident, compassionate and capable young people who think for themselves and act for others.
             </p>
           </Reveal>
-          <Reveal delay={0.1} className="rounded-3xl border border-gold/25 bg-gold-soft/30 p-8">
+          <Reveal delay={0.1} className="rounded-3xl border border-gold/25 bg-gold-soft/30 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
             <p className="eyebrow">Our Mission</p>
             <p className="mt-4 font-display text-2xl leading-snug text-ink">
               To blend deep academics with art, sport and real-world learning — in a safe, joyful, future-ready campus.
@@ -78,7 +78,7 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {VALUES.map((v, i) => (
               <Reveal key={v.t} delay={(i % 4) * 0.06}>
-                <div className="card h-full p-6">
+                <div className="card h-full p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card">
                   <h3 className="text-xl font-semibold text-ink">{v.t}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink/60">{v.d}</p>
                 </div>
@@ -98,7 +98,7 @@ export default function AboutPage() {
           <div className="mt-12 space-y-6">
             {TIMELINE.map((t, i) => (
               <Reveal key={t.y} delay={i * 0.05}>
-                <div className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-6">
+                <div className="flex gap-6 rounded-2xl border border-ink/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
                   <div className="w-20 shrink-0 font-display text-2xl font-semibold text-gold">{t.y}</div>
                   <div>
                     <h3 className="text-lg font-semibold text-ink">{t.t}</h3>

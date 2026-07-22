@@ -54,7 +54,7 @@ export default function AcademicsPage() {
         <div className="container-x grid gap-6 lg:grid-cols-3">
           {WINGS.map((w, i) => (
             <Reveal key={w.name} delay={i * 0.08}>
-              <article className="card flex h-full flex-col p-7">
+              <article className="card flex h-full flex-col p-7 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card">
                 <span className="text-xs font-semibold uppercase tracking-wider text-gold">{w.grade}</span>
                 <h3 className="mt-2 font-display text-2xl font-semibold text-ink">{w.name}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink/60">{w.desc}</p>
@@ -81,7 +81,7 @@ export default function AcademicsPage() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {FACILITIES.map(([t, d], i) => (
               <Reveal key={t} delay={(i % 3) * 0.06}>
-                <div className="card h-full p-6">
+                <div className="card h-full p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card">
                   <h3 className="text-lg font-semibold text-ink">{t}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink/60">{d}</p>
                 </div>

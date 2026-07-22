@@ -58,7 +58,7 @@ export default function AdmissionsPage() {
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {STEPS.map((s, i) => (
               <Reveal key={s.n} delay={(i % 4) * 0.06}>
-                <div className="card h-full p-6">
+                <div className="card h-full p-6 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-card">
                   <span className="font-display text-3xl font-semibold text-gold/40">{s.n}</span>
                   <h3 className="mt-3 text-lg font-semibold text-ink">{s.t}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-ink/60">{s.d}</p>
@@ -78,7 +78,7 @@ export default function AdmissionsPage() {
           </Reveal>
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {DOCS.map((d) => (
-              <div key={d} className="flex items-start gap-3 rounded-2xl border border-ink/10 bg-white p-4 text-sm text-ink/70 shadow-soft">
+              <div key={d} className="flex items-start gap-3 rounded-2xl border border-ink/10 bg-white p-4 text-sm text-ink/70 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card">
                 <span className="mt-0.5 text-leaf">✓</span> {d}
               </div>
             ))}
