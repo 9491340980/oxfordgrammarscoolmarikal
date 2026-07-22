@@ -70,11 +70,23 @@ const config: Config = {
           "0%,100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        blob: {
+          "0%,100%": { transform: "translate(0,0) scale(1)" },
+          "33%": { transform: "translate(24px,-34px) scale(1.12)" },
+          "66%": { transform: "translate(-18px,18px) scale(0.94)" },
+        },
+        shimmer: {
+          "0%": { backgroundPosition: "200% 0" },
+          "100%": { backgroundPosition: "-200% 0" },
+        },
       },
       animation: {
         marquee: "marquee 32s linear infinite",
         "fade-up": "fade-up 0.7s ease both",
         float: "float 6s ease-in-out infinite",
+        "float-slow": "float 8s ease-in-out infinite",
+        blob: "blob 16s ease-in-out infinite",
+        shimmer: "shimmer 3s linear infinite",
       },
     },
   },
