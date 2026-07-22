@@ -33,7 +33,7 @@
     "social.facebook": "",
     "social.youtube": "https://youtube.com/@oxfordgrammarschoolcbsemarikal",
     "disc.affiliationNo": "",
-    "disc.schoolCode": "",
+    "disc.schoolCode": "6598/B1/pvt/2023",
     "disc.affiliationValid": "",
     "disc.trustName": "Marikal Educational Society",
     "disc.principalName": "Suvarna Raju N",
@@ -41,18 +41,23 @@
     "disc.email": "oxfordgrammarschoolcbsemarikal@gmail.com",
     "disc.phone": "+91 94905 02838",
     "disc.address": "Raichur Road, Marikal (Village & Mandal), Narayanpet District, Telangana 509351",
-    "disc.totalArea": "",
-    "disc.builtArea": "",
-    "disc.playground": "",
+    "disc.totalArea": "8,149.19",
+    "disc.builtArea": "1,767.70",
+    "disc.playground": "6,381.49",
     "disc.classrooms": "",
-    "disc.labs": "",
-    "disc.libraryBooks": "",
-    "disc.internet": "",
+    "disc.labs": "4 — Science, Maths & Computer labs (600 sq. ft. each)",
+    "disc.libraryBooks": "3,000 (library area 1,200 sq. ft.)",
+    "disc.internet": "Yes",
     "disc.totalTeachers": "21",
     "disc.pgt": "6",
     "disc.tgt": "6",
     "disc.prt": "8",
-    "disc.ratio": ""
+    "disc.ratio": "",
+    "disc.girlsToilets": "20",
+    "disc.boysToilets": "15",
+    "disc.inspectionVideo": "https://youtube.com/@oxfordgrammarschoolcbsemarikal?si=n_LDWcV8OeDqXF-d",
+    "disc.smcUrl": "/smc-members-list.pdf",
+    "disc.ptaUrl": "/pta-members-list.pdf"
   },
   "gallery": [
     {
@@ -328,8 +333,8 @@
     },
     {
       "label": "Copy of societal/trust/company registration / renewal certificate, as applicable",
-      "fileUrl": null,
-      "note": "Available on request at the school office",
+      "fileUrl": "/trust-registration.pdf",
+      "note": "Trust registration document",
       "sort": 1
     },
     {
