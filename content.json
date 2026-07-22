@@ -322,8 +322,8 @@
   "disclosureDocs": [
     {
       "label": "Copy of Affiliation / Upgradation Letter and recent extension of affiliation, if any",
-      "fileUrl": null,
-      "note": "Available on request at the school office",
+      "fileUrl": "/school-permission-copy.pdf",
+      "note": "School permission / recognition copy",
       "sort": 0
     },
     {
@@ -334,8 +334,8 @@
     },
     {
       "label": "Copy of No Objection Certificate (NOC) issued, if applicable, by the State Govt./UT",
-      "fileUrl": null,
-      "note": "Available on request at the school office",
+      "fileUrl": "/noc-gram-panchayat.pdf",
+      "note": "NOC issued by Gram Panchayat",
       "sort": 2
     },
     {
@@ -346,25 +346,25 @@
     },
     {
       "label": "Copy of valid Building Safety Certificate as per the national building code",
-      "fileUrl": null,
+      "fileUrl": "/building-safety-certificate.pdf",
       "note": "Available on request at the school office",
       "sort": 4
     },
     {
       "label": "Copy of valid Fire Safety Certificate issued by the competent authority",
-      "fileUrl": null,
+      "fileUrl": "/fire-safety-certificate.pdf",
       "note": "Available on request at the school office",
       "sort": 5
     },
     {
       "label": "Copy of the DEO certificate submitted by the school for affiliation/upgradation/extension",
       "fileUrl": null,
-      "note": "Available on request at the school office",
+      "note": "School permission / recognition copy",
       "sort": 6
     },
     {
       "label": "Copies of valid Water, Health and Sanitation certificates",
-      "fileUrl": null,
+      "fileUrl": "/water-health-sanitation-certificate.pdf",
       "note": "Available on request at the school office",
       "sort": 7
     }
