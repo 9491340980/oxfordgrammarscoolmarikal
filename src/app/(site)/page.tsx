@@ -147,11 +147,6 @@ export default function HomePage() {
       <section className="section bg-white">
         <div className="container-x grid gap-14 lg:grid-cols-2 lg:items-center">
           <Reveal>
-            <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] shadow-card ring-1 ring-ink/5">
-              <Image src={c["about.image"]} alt="A class at Oxford Grammar School" fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
-            </div>
-          </Reveal>
-          <Reveal delay={0.1}>
             <p className="eyebrow">{c["about.eyebrow"]}</p>
             <h2 className="display-h2 mt-3">{c["about.title"]}</h2>
             <div className="prose-ink mt-6 space-y-4">
@@ -159,6 +154,11 @@ export default function HomePage() {
               <p>{c["about.body2"]}</p>
             </div>
             <Link href="/about" className="btn-ink mt-8">Our Story →</Link>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem] shadow-card ring-1 ring-ink/5">
+              <Image src={c["about.image"]} alt="A class at Oxford Grammar School" fill className="object-cover" sizes="(max-width:1024px) 100vw, 50vw" />
+            </div>
           </Reveal>
         </div>
       </section>
