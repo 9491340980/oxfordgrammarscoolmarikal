@@ -42,7 +42,8 @@ export default function EnquiryForm({
         body: JSON.stringify({
           access_key: accessKey,
           subject: "New admission enquiry — Oxford Grammar School",
-          from_name: data.name,
+          from_name: "Oxford Grammar School Website",
+          replyto: data.email || undefined,
           ...data,
         }),
       });
