@@ -8,7 +8,7 @@
     "hero.title": "Raise minds that change the",
     "hero.titleAccent": "world.",
     "hero.subtitle": "A bold, joyful CBSE school where children think for themselves, create fearlessly, and grow into the people the world needs.",
-    "hero.image": "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=1100&q=80&auto=format&fit=crop",
+    "hero.image": "/uploads/classroom/3N9A7572.JPG",
     "stats.s1.value": "2024",
     "stats.s1.label": "Established",
     "stats.s2.value": "CBSE",
@@ -21,7 +21,7 @@
     "about.title": "Strive for excellence. Shine with confidence.",
     "about.body1": "Founded in 2024, Oxford Grammar School is a CBSE school in Marikal, Narayanpet district — built on one belief: every child is extraordinary when someone truly believes in them.",
     "about.body2": "Our classrooms blend academics with art, sport and real-world learning — with modern science, maths and computer labs, a growing library and smart classrooms — so students grow curious, kind and confident.",
-    "about.image": "/uploads/science-lab/9.jpeg",
+    "about.image": "/uploads/school.JPG",
     "principal.name": "Suvarna Raju N",
     "principal.message": "At Oxford Grammar School, we strive for excellence and help every child shine with confidence. Our dedicated teachers nurture curious, kind and capable young people ready for the world ahead.",
     "principal.photo": "/principal.jpeg",
@@ -62,52 +62,59 @@
   "gallery": [
     {
       "id": "g1",
-      "title": "Science Laboratory",
-      "category": "Labs",
-      "url": "/uploads/science-lab/9.jpeg",
+      "title": "Our Campus",
+      "category": "Campus",
+      "url": "/uploads/school.JPG",
       "sort": 0
     },
     {
       "id": "g2",
-      "title": "Biology Lab",
-      "category": "Labs",
-      "url": "/uploads/science-lab/5.jpeg",
+      "title": "Smart Classroom",
+      "category": "Classrooms",
+      "url": "/uploads/classroom/3N9A7572.JPG",
       "sort": 1
     },
     {
       "id": "g3",
-      "title": "Maths Lab",
+      "title": "Science Laboratory",
       "category": "Labs",
-      "url": "/uploads/science-lab/13.jpeg",
+      "url": "/uploads/science-lab/9.jpeg",
       "sort": 2
     },
     {
       "id": "g4",
-      "title": "Computer Lab",
-      "category": "Labs",
-      "url": "/uploads/computer/1.jpeg",
+      "title": "Annual Day Celebrations",
+      "category": "Events",
+      "url": "/uploads/events/063A1032.JPG",
       "sort": 3
     },
     {
       "id": "g5",
-      "title": "Library",
-      "category": "Library",
-      "url": "/uploads/library/1.jpeg",
+      "title": "Our Students",
+      "category": "Students",
+      "url": "/uploads/students/063A7598.JPG",
       "sort": 4
     },
     {
       "id": "g6",
-      "title": "Library Reading Collection",
-      "category": "Library",
-      "url": "/uploads/library/2.jpeg",
+      "title": "Learning by Doing",
+      "category": "Activities",
+      "url": "/uploads/experiment/3N9A7583.JPG",
       "sort": 5
     },
     {
       "id": "g7",
-      "title": "Smart Classroom",
-      "category": "Classrooms",
-      "url": "/uploads/digitalclassroom.jpeg",
+      "title": "Computer Lab",
+      "category": "Labs",
+      "url": "/uploads/computer/1.jpeg",
       "sort": 6
+    },
+    {
+      "id": "g8",
+      "title": "Library",
+      "category": "Library",
+      "url": "/uploads/library/1.jpeg",
+      "sort": 7
     }
   ],
   "news": [
