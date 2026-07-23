@@ -31,7 +31,7 @@ export default function SiteFooter() {
           <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-cream">Information</h4>
           <ul className="space-y-2.5 text-sm">
             <li><Link href="/admissions" className="hover:text-gold">Admissions</Link></li>
-            <li><Link href="/news" className="hover:text-gold">News & Circulars</Link></li>
+            <li><Link href="/gallery" className="hover:text-gold">Gallery</Link></li>
             <li><Link href="/disclosure" className="hover:text-gold">Mandatory Disclosure</Link></li>
             <li><Link href="/contact" className="hover:text-gold">Contact</Link></li>
           </ul>

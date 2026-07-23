@@ -5,7 +5,6 @@ import Image from "next/image";
 import { useSite } from "@/lib/site-content";
 import Reveal from "@/components/Reveal";
 import EnquiryForm from "@/components/EnquiryForm";
-import CategoryChip from "@/components/CategoryChip";
 
 const PILLARS = [
   { icon: "🧑‍🏫", tint: "bg-coral-soft", grad: "from-coral-soft/70", t: "Teachers who believe", d: "Mentors who know every child by name — and never let a single one slip through." },
@@ -31,6 +30,12 @@ const HIGHLIGHTS = [
   { icon: "🛡️", label: "Safe Campus", grad: "from-gold-soft" },
 ];
 
+const MOMENTS = [
+  { img: "/uploads/events/063A1039.JPG", tag: "Annual Day", title: "Annual Day Celebrations", desc: "Our students lit up the stage with classical dance, music and colour." },
+  { img: "/uploads/opening/3N9A7602.JPG", tag: "Milestone", title: "School Inauguration", desc: "A proud beginning as our campus opened its doors in Marikal." },
+  { img: "/uploads/events/063A1183.JPG", tag: "Culturals", title: "Cultural Programmes", desc: "From our littlest learners upward, every child gets their moment on stage." },
+];
+
 const STAT_META = [
   { tint: "text-coral-light", icon: "🎓", ring: "bg-coral/20" },
   { tint: "text-leaf-light", icon: "📘", ring: "bg-leaf/20" },
@@ -42,7 +47,6 @@ export default function HomePage() {
   const s = useSite();
   const c = s.content;
   const gallery = s.gallery.slice(0, 6);
-  const news = s.news.slice(0, 3);
   const results = s.resultsByClass("X").slice(0, 3);
 
   const stats = [1, 2, 3, 4].map((i) => ({
@@ -330,31 +334,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* NEWS */}
+      {/* LIFE AT SCHOOL — real moments */}
       <section className="section bg-sky">
         <div className="container-x">
           <Reveal className="flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="eyebrow">Latest</p>
-              <h2 className="display-h2 mt-3">News & happenings.</h2>
+            <div className="max-w-xl">
+              <p className="eyebrow">Life at Oxford</p>
+              <h2 className="display-h2 mt-3">Moments from our school.</h2>
+              <p className="mt-4 text-ink/60">Annual Day performances, celebrations and milestones — glimpses of everyday life on our campus.</p>
             </div>
-            <Link href="/news" className="btn-outline">All News →</Link>
+            <Link href="/gallery" className="btn-outline">View Gallery →</Link>
           </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {news.map((n, i) => (
-              <Reveal key={n.id} delay={i * 0.08}>
-                <Link href={`/article/?slug=${n.slug}`} className="card group block h-full overflow-hidden transition hover:-translate-y-1 hover:shadow-soft">
-                  {n.coverUrl && (
-                    <div className="relative aspect-[16/10] overflow-hidden">
-                      <Image src={n.coverUrl} alt={n.title} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width:768px) 100vw, 33vw" />
-                    </div>
-                  )}
-                  <div className="p-6">
-                    <CategoryChip category={n.category} />
-                    <h3 className="mt-3 text-lg font-semibold leading-snug text-ink group-hover:text-gold">{n.title}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink/60 line-clamp-2">{n.excerpt}</p>
+            {MOMENTS.map((m, i) => (
+              <Reveal key={m.title} delay={i * 0.08}>
+                <figure className="card group block h-full overflow-hidden transition hover:-translate-y-1 hover:shadow-soft">
+                  <div className="relative aspect-[16/10] overflow-hidden">
+                    <Image src={m.img} alt={m.title} fill className="object-cover transition duration-500 group-hover:scale-105" sizes="(max-width:768px) 100vw, 33vw" />
                   </div>
-                </Link>
+                  <figcaption className="p-6">
+                    <span className="chip bg-amber-soft text-ink">{m.tag}</span>
+                    <h3 className="mt-3 text-lg font-semibold leading-snug text-ink">{m.title}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-ink/60">{m.desc}</p>
+                  </figcaption>
+                </figure>
               </Reveal>
             ))}
           </div>
