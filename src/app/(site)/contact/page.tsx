@@ -35,9 +35,9 @@ export default function ContactPage() {
             <div className="card p-6">
               <h3 className="text-sm font-semibold uppercase tracking-wide text-gold">Follow us</h3>
               <div className="mt-2 flex gap-4 text-sm">
-                <a href={c["social.instagram"]} className="text-ink/70 hover:text-gold">Instagram</a>
-                <a href={c["social.facebook"]} className="text-ink/70 hover:text-gold">Facebook</a>
-                <a href={c["social.youtube"]} className="text-ink/70 hover:text-gold">YouTube</a>
+                {c["social.instagram"] && <a href={c["social.instagram"]} target="_blank" rel="noopener" className="text-ink/70 hover:text-gold">Instagram</a>}
+                {c["social.facebook"] && <a href={c["social.facebook"]} target="_blank" rel="noopener" className="text-ink/70 hover:text-gold">Facebook</a>}
+                {c["social.youtube"] && <a href={c["social.youtube"]} target="_blank" rel="noopener" className="text-ink/70 hover:text-gold">YouTube</a>}
               </div>
             </div>
           </Reveal>

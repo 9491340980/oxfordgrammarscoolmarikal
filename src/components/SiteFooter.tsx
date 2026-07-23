@@ -45,9 +45,9 @@ export default function SiteFooter() {
             <a href={`mailto:${c["contact.email"]}`} className="hover:text-gold">{c["contact.email"]}</a>
           </p>
           <div className="mt-4 flex gap-3 text-xs">
-            <a href={c["social.instagram"]} className="hover:text-gold">Instagram</a>
-            <a href={c["social.facebook"]} className="hover:text-gold">Facebook</a>
-            <a href={c["social.youtube"]} className="hover:text-gold">YouTube</a>
+            {c["social.instagram"] && <a href={c["social.instagram"]} target="_blank" rel="noopener" className="hover:text-gold">Instagram</a>}
+            {c["social.facebook"] && <a href={c["social.facebook"]} target="_blank" rel="noopener" className="hover:text-gold">Facebook</a>}
+            {c["social.youtube"] && <a href={c["social.youtube"]} target="_blank" rel="noopener" className="hover:text-gold">YouTube</a>}
           </div>
         </div>
       </div>

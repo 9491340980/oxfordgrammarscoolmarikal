@@ -28,12 +28,12 @@ const WINGS = [
 ];
 
 const FACILITIES = [
-  ["Science Labs", "Physics, Chemistry & Biology labs equipped to CBSE norms."],
-  ["Robotics & AI", "Coding, electronics, 3D printing and design thinking."],
+  ["Science, Maths & Computer Labs", "Well-equipped labs for hands-on science, maths and computer learning, as per CBSE norms."],
   ["Library", "A growing library of storybooks, references, encyclopaedias and periodicals."],
-  ["Smart Classrooms", "Interactive panels and blended digital learning."],
-  ["Sports Arena", "Cricket, athletics, basketball and indoor games."],
-  ["Performing Arts", "Music, dance and theatre studios for every child."],
+  ["Smart Classrooms", "Interactive digital panels for blended, engaging learning."],
+  ["IIT Foundation", "An early foundation for competitive exams from Grade 6 onwards."],
+  ["Sports & Games", "Cricket, athletics and outdoor games on our school playground."],
+  ["Music & Dance", "Annual Day, cultural programmes and stage performances for every child."],
 ];
 
 export default function AcademicsPage() {

@@ -28,7 +28,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Us"
         title="A school built on belief, not pressure."
-        subtitle={`Since ${c["school.estd"]}, ${c["school.name"]} has grown into one of the region's most-loved CBSE schools — by holding on to one idea.`}
+        subtitle={`Since ${c["school.estd"]}, ${c["school.name"]} has given children in Marikal a caring, future-ready CBSE education — by holding on to one idea.`}
         image={c["about.image"]}
       />
 

@@ -10,9 +10,9 @@ const PILLARS = [
   { icon: "🧑‍🏫", tint: "bg-coral-soft", grad: "from-coral-soft/70", t: "Teachers who believe", d: "Mentors who know every child by name — and never let a single one slip through." },
   { icon: "🔬", tint: "bg-leaf-soft", grad: "from-leaf-soft/70", t: "Learning by doing", d: "Labs, projects and real questions over rote — concepts that actually stick." },
   { icon: "🎨", tint: "bg-amber-soft", grad: "from-amber-soft/70", t: "Art & sport for all", d: "Music, dance, cricket, athletics — talent grows outside the textbook too." },
-  { icon: "🛡️", tint: "bg-sky", grad: "from-sky/70", t: "A campus that's safe", d: "CCTV, GPS buses, trained staff and a nurse on site. Parents trust us fully." },
+  { icon: "🛡️", tint: "bg-sky", grad: "from-sky/70", t: "A safe, caring campus", d: "Secure premises and attentive staff who know every child by name — a place parents trust." },
   { icon: "🤝", tint: "bg-coral-soft", grad: "from-coral-soft/70", t: "Values that last", d: "Honesty, empathy and grit — lived every day, not just preached at assembly." },
-  { icon: "🎓", tint: "bg-leaf-soft", grad: "from-leaf-soft/70", t: "Results that open doors", d: "Top board scores and future-ready pathways for every child." },
+  { icon: "🎓", tint: "bg-leaf-soft", grad: "from-leaf-soft/70", t: "Foundations for the future", d: "Strong academics with an IIT foundation — future-ready skills for every child." },
 ];
 
 const JOURNEY = [
