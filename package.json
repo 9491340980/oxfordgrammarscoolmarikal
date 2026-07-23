@@ -7,6 +7,7 @@
     "build": "next build",
     "preview": "npx serve out -l 3000",
     "studio": "node studio/server.mjs",
+    "sync-from-db": "node scripts/sync-from-db.mjs",
     "deploy": "next build && npx firebase-tools deploy --only hosting",
     "lint": "next lint"
   },
